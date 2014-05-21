@@ -1,0 +1,32 @@
+# humanstxt.org/
+
+
+# TEAM
+
+    Telegraph Creative
+    Site: wearetelegraph.com
+    Twitter: wearetelegraph
+    Location: Dallas, TX
+    --
+    @courtney271
+    @lindseybradford
+
+
+# THANKS
+
+#   Contributor Name
+#   Site:
+#   Twitter:
+#   Location:
+#   --
+#   @
+
+
+# TECHNOLOGY COLOPHON
+
+   HTML5, CSS3
+   jQuery, Modernizr+YepNope,
+   SASS, HAML
+   SusyGrids, Autoprefix
+
+

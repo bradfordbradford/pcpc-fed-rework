@@ -1,0 +1,26 @@
+
+
+
+// Structure: General //
+
+.content-row {
+    @include clearfix;
+}
+
+.outer-bounds {
+    @include outer-container()
+}
+
+// Move this Later
+nav.sub {
+    @include span-columns(3);
+}
+
+.main-content {
+    @include span-columns(9);
+}
+
+footer.sub {
+    @include clearfix;
+    padding:$base-line-height*2 0;
+}

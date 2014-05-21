@@ -1,0 +1,120 @@
+
+
+
+// Functions for px to em conversions
+// ------------------------------------------------------------
+@function emify($target, $context) {
+   @if $target == 0 { @return 0 }
+   @return $target / $context + 0em;
+}
+
+// Make px to ems using base-font-size
+// echo as: font-size: em-font(#px);
+@function em-font($target, $context: $base-font-size) {
+   @return emify($target, $context);
+}
+
+// Make px to ems using base-line-height
+// echo as: font-size: em-base(#px);
+@function em-base($target, $context: $base-line-height) {
+   @return emify($target, $context);
+}
+
+
+
+
+// HEX to RGB - http://codepen.io/sturobson/pen/hdKyv
+// -------------------------------------------------------
+@mixin rgba($color, $value) {
+    background: $color;
+    background: rgba($color, $value);
+}
+
+
+
+// Opacity Mixin
+// -------------------------------------------------------
+@mixin opacity($value) {
+    -webkit-opacity:$value;
+    -moz-opacity:$value;
+    -o-opacity:$value;
+    opacity:$value;
+    filter: alpha(opacity=$value);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$value)";
+
+}
+
+
+
+// Center Colums
+// -------------------------------------------------------
+@mixin center-columns {
+    display: block;
+    float:none;
+    margin: 0 auto;
+}
+
+
+
+// Bounds
+// -------------------------------------------------------
+@mixin bounds {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+
+
+// Clearfix
+// -------------------------------------------------------
+@mixin clearlyFixed {
+    zoom:1;
+    &:before, &:after {
+        content: "\0020";
+        display: block;
+        height: 0;
+        overflow: hidden;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+
+
+// Full Bleed
+// -------------------------------------------------------
+@mixin fullBleed {
+    margin: auto auto ;
+    display: block;
+    float:none;
+    width: auto;
+}
+
+
+
+// List styles
+// -------------------------------------------------------
+@mixin unordered {
+     list-style-position: outside;
+     list-style-type: disc;
+}
+
+@mixin unordered-inside {
+     list-style-position: inside;
+     list-style-type: disc;
+}
+
+@mixin ordered {
+    list-style-position: outside;
+    list-style-type: decimal;
+}
+
+@mixin ordered-inside {
+    list-style-position: inside;
+    list-style-type: decimal;
+}
+
+@mixin nobullet {
+    list-style-type: none;
+}

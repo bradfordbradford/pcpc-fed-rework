@@ -1,0 +1,115 @@
+
+.footer {
+  $footer-color: white;
+  $footer-background: $brown url(../img/patterns/pcpc-footer.jpg) repeat;
+  $footer-link-color: transparentize($footer-color, .3);
+  $footer-disclaimer-color: transparentize($footer-color, .3);
+
+  border-top: 1px solid darken($brown, 10%);
+  background: $footer-background;
+  color: $footer-color;
+  padding: $base-line-height*2 $gutter;
+  width: 100%;
+
+  .footer-logo {
+    text-align: center;
+    margin-bottom: 2em;
+
+    img {
+      height: 3em;
+    }
+  }
+
+  .footer-links {
+    @include clearfix;
+    margin-bottom: $base-line-height;
+
+    @include media($medium-screen) {
+      @include shift(1);
+    }
+  }
+
+  ul {
+    margin-bottom: $base-line-height*2;
+
+    @include media($medium-screen) {
+      @include span-columns(3);
+      // @include omega(3n);
+      @include clearfix;
+    }
+  }
+
+  li {
+    text-align: center;
+
+    @include media($medium-screen) {
+      text-align: left;
+    }
+  }
+
+  li a {
+    color: $footer-link-color;
+
+    &:hover {
+      color: transparentize($footer-color, 0);
+    }
+  }
+
+  h3 {
+    font-family: $sans-serif;
+    color: $gold;
+    font-size: 1em;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: .4em;
+  }
+
+  hr {
+    border: 1px solid transparentize($footer-disclaimer-color, .4);
+    margin: 0 auto $base-line-height;
+    width: 12em;
+  }
+
+  p, p a, a {
+    color:$footer-disclaimer-color;
+    font-size: .9em;
+    line-height: 1.5em;
+    margin: auto;
+    max-width: 35em;
+    text-align: center;
+  }
+
+  a {
+    font-weight: 800;
+  }
+
+  // Footnote
+  .footnotes {
+    text-align: center;
+    h3 {
+      color:$footer-disclaimer-color;
+      font-family: $serif;
+      text-transform: none;
+    }
+  }
+}
+
+
+
+
+html, body {
+  height: 100%;
+}
+#content-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  // margin-bottom: -200px;
+}
+#content-wrap:after {
+  content: "";
+  display: block;
+}
+#main-footer, #content-wrap:after {
+  /* .push must be the same height as footer */
+  // height: 400px;
+}
