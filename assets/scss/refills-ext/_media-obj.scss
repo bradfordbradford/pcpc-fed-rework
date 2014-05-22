@@ -1,0 +1,52 @@
+.media-obj {
+
+  $media-color: $base-font-color;
+  $media-detail-color: transparentize($media-color, .5);
+  $media-image-vert-alignment: top;
+
+  display: table;
+  width: 100%;
+  margin-bottom: $base-line-height;
+  padding-bottom: 1em;
+  border-bottom: 1px solid transparentize($media-color, .9);
+
+  .media-image,
+  .media-content {
+    display: table-cell;
+    vertical-align: $media-image-vert-alignment;
+  }
+
+  .media-image {
+    @include span-columns(5);
+    > img {
+      height: auto;
+      display: block;
+      max-width: 100%;
+    }
+
+    .media-reverse-order & {
+      padding-right: 0;
+      padding-left: 10px;
+    }
+  }
+
+  .media-content {
+    @include span-columns(7);
+
+    h1 {
+      font-size: 1em;
+      margin-bottom: .5em;
+    }
+
+    p {
+      margin-bottom: .5em;
+    }
+
+    p.media-detail {
+      font-style: italic;
+      font-size: .9em;
+      color: $media-detail-color;
+    }
+  }
+}
+

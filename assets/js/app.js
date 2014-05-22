@@ -9,6 +9,9 @@ $(document).ready(function($) {
         $('body').removeClass('init').addClass('run');
     }, 500);
 
+    // Menu ----------
+    $('html.js #main-navigation').accessibleMegaMenu();
+
 
     // Toggle Class based on Scroll Position (nav changes) ----------
     // var mainNav = $('#main-site-navigation-wrap');

@@ -1,9 +1,10 @@
-.comment {
+.comment,
+.media-obj-small {
   $comment-gutter: 1.4em;
-  $comment-image-padding: .7em;
+  $comment-image-padding: .25em;
   $comment-image-width: 4em;
   $comment-color: $base-font-color;
-  $comment-background: lighten($base-accent-color, 15);
+  $comment-background: lighten($light-gray, 15);
   $comment-detail-color: transparentize($comment-color, .5);
   $comment-image-vert-alignment: top;
 
@@ -14,12 +15,15 @@
   border-bottom: 1px solid transparentize($comment-color, .9);
 
   .comment-image,
-  .comment-content {
+  .comment-content,
+  .media-image,
+  .media-content {
     display: table-cell;
     vertical-align: $comment-image-vert-alignment;
   }
 
-  .comment-image {
+  .comment-image,
+  .media-image {
     padding-right: $comment-gutter;
 
     > img {
@@ -38,7 +42,8 @@
     }
   }
 
-  .comment-content {
+  .comment-content,
+  .media-content {
     width: 100%;
 
     h1 {

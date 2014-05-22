@@ -30,7 +30,7 @@
         %link{:rel => "stylesheet", :href => "../css/app.css"}
 
         -# Modernizr
-        %script{:src => "../js/min/modernizr.min.js"}
+        %script{:src => "../js/libs/modernizr-ck.js"}
 
         -# IE LT 9
         <!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="../css/ie8.css" /><script src='../js/libs/ie.min.js'></script><![endif]-->
@@ -46,84 +46,17 @@
                 .site-navigation-inner
 
                     -# Logo
-                        %header#site-title{:role => "banner"}
-                            %h1.logo
-                                %a{:href => "#"} Name
+                    %header#site-title{:role => "banner"}
+                        %h1.logo
+                            %a{:href => "#"} Name
 
                     -# Navigation
                     %nav#main-navigation{:role => "navigation"}
                         %ol.navigation-list
-                            %li.nav-item
-                                %a{:href => "#"} About PCPC
-                            %li.nav-item
-                                %a{:href => "#"} Worship
-                                %ol
-                                    %li.nav-sub-item
-                                        %header
-                                            %h4 Description
-                                        %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, repellendus, deleniti, fugit, laboriosam minima atque eius voluptatibus tempora accusamus ratione eos non ipsum deserunt optio neque maiores reprehenderit necessitatibus eaque!
-
-                                    %li.nav-sub-item
-                                        .col-six
-                                            %h4.title
-                                                %a{:href => "#"}
-                                                    Who We Are
-                                            %ol
-                                                %li
-                                                    %a{:href => "#"} Link Item
-                                                %li
-                                                    %a{:href => "#"} Link Item
-
-
-                                            %h4.title
-                                                %a{:href => "#"}
-                                                    Our Campus
-                                            %ol
-                                                %li
-                                                    %a{:href => "#"} Link Item
-                                                %li
-                                                    %a{:href => "#"} Link Item
-
-                                            %h4.title
-                                                %a{:href => "#"}
-                                                    Services
-                                            %ol
-                                                %li
-                                                    %a{:href => "#"} Link Item
-                                                %li
-                                                    %a{:href => "#"} Link Item
-
-
-                                        .col-six
-                                            %h4.title
-                                                %a{:href => "#"}
-                                                    Our Leadership and Staff
-                                            %ol
-                                                %li
-                                                    %a{:href => "#"} Link Item
-                                                %li
-                                                    %a{:href => "#"} Link Item
-
-                                                %hr/
-
-                                                %li
-                                                    %a{:href => "#"} Link Item
-                                                %li
-                                                    %a{:href => "#"} Link Item
-
-
-                            %li.nav-item
-                                %a{:href => "#"} Grow
-                            %li.nav-item
-                                %a{:href => "#"} Serve
-                            %li.nav-item
-                                %a{:href => "#"} Missions
-                            %li.nav-item
-                                %a{:href => "#"} Care
-                            %li.nav-item
-                                %a{:href => "#"} Resources
-                            %li.nav-item
-                                %a{:href => "#"} News/Events
+                            %li
+                                %a{:href => "#"} About
+                            %li
+                                %a{:href => "#"} Contact
 
 
         -# Content Wrap
@@ -135,9 +68,9 @@
                             %li.title
                                 %h6
                                     Who We Are
-                            %li.active
-                                %a{:href => "/assets/html/index.html"} Our Theological Identity
                             %li
+                                %a{:href => "/assets/html/index.html"} Our Theological Identity
+                            %li.active
                                 %a{:href => "/assets/html/article-video.html"} Our History
                             %li
                                 %a{:href => "#"} Stories of Rescue
@@ -167,9 +100,9 @@
 
                     .main-content
                         %header.content-header
-                            %h2 Our Theological Identity
+                            %h2 Our History
                             %hr/
-                            %img{:src => "http://pcpc.org/image/2/990/300/5/0/uploads/images/pages/dscf0022.jpg", :alt => ""}/
+                            %iframe{allowfullscreen: "", frameborder: "0", height: "720", mozallowfullscreen: "", src: "//player.vimeo.com/video/29465219", title: "20 Years of the Word Preached", webkitallowfullscreen: "", width: "1280"}
                             %hr/
 
                             %p.lead
@@ -179,13 +112,6 @@
                             %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, dolorem, molestias accusantium dignissimos perferendis ut quae pariatur nihil commodi nesciunt necessitatibus magni beatae optio voluptatibus debitis fugiat amet saepe repudiandae!
                             %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, dolorem, molestias accusantium dignissimos perferendis ut quae pariatur nihil commodi nesciunt necessitatibus magni beatae optio voluptatibus debitis fugiat amet saepe repudiandae!
 
-                            %hr/
-                            %h3 What is it that we believe
-
-                            %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, dolorem, molestias accusantium dignissimos perferendis ut quae pariatur nihil commodi nesciunt necessitatibus magni beatae optio voluptatibus debitis fugiat amet saepe repudiandae!
-
-                            %hr/
-                            %h3 We are evangelical
                             %p To say that we are evangelical means that we take our stand with all those who believe in what used to be called “the fundamentals”: the existence of the triune God, the deity of Jesus, the virgin birth, and substitutionary and vicarious atonement of Christ, the physical resurrection of Christ, the sure return of Christ, and the infallibility and divine authority of the Bible which is a faithful and true guide to what we are to believe and how we are to live. We joyfully affirm our unity with those from every tradition and denomination who hold to these fundamentals including those true believers in Christ who, for whatever reasons, find themselves members of denominations or churches with which we might have certain disagreements.
 
                             %hr/

@@ -1,0 +1,238 @@
+!!! 5
+-# paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+%html.no-js{:lang => "en"}
+
+    %head
+
+        %meta{:charset => "utf-8", :"http-equiv"=>"Content-Type", :content=>"text/html"}
+
+        %title Project Name
+        %meta{:name => "description", :content => ""}
+        %meta{:name => "keywords", :content => ""}
+        %meta{:name => "author", :content => ""}
+
+        -# Mobile
+        %meta{:name => "viewport", :content => "width=device-width, initial-scale=1"}
+
+        -# Favicon
+        / %link{:href => "../img/icons/favicon.ico", :rel => "shortcut icon"}
+
+        -# FONTS
+        %script{:src => "//use.typekit.net/xrq4srv.js"}
+        %script
+            try{Typekit.load();}catch(e){}
+
+        -# CSS
+        %link{:rel => "stylesheet", :href => "../css/app.css"}
+
+        -# Modernizr
+        %script{:src => "../js/libs/modernizr-ck.js"}
+
+        -# IE LT 9
+        <!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="../css/ie8.css" /><script src='../js/libs/ie.min.js'></script><![endif]-->
+
+
+
+    %body.init
+
+
+        -# Header & Content Wrap
+        %section#header-nav-wrap
+            %section#main-site-navigation-wrap
+                .site-navigation-inner
+
+                    -# Logo
+                    %header#site-title{:role => "banner"}
+                        %h1.logo
+                            %a{:href => "#"} Name
+
+                    -# Navigation
+                    %nav#main-navigation{:role => "navigation"}
+                        %ol.navigation-list
+                            %li
+                                %a{:href => "#"} About
+                            %li
+                                %a{:href => "#"} Contact
+
+
+        -# Content Wrap
+        %main#content-wrap{:role => "main"}
+            .outer-bounds
+                .content-row
+                    %nav.sub
+                        %ul.border-b
+                            %li.title
+                                %h6
+                                    Who We Are
+                            %li
+                                %a{:href => "/assets/html/index.html"} Our Theological Identity
+                            %li
+                                %a{:href => "/assets/html/article-video.html"} Our History
+                            %li
+                                %a{:href => "#"} Stories of Rescue
+
+                            %li.title
+                                %h6
+                                    Our Campus
+                            %li
+                                %a{:href => "/assets/html/article-map"} New to PCPC
+                            %li.active
+                                %a{:href => "/assets/html/article-list"} Our Session and Diaconate
+                            %li
+                                %a{:href => "#"} Item
+                            %li
+                                %a{:href => "#"} Item
+                            %li.title
+                                %h6
+                                    Title
+                            %li
+                                %a{:href => "#"} Item
+                            %li
+                                %a{:href => "#"} Item
+                            %li
+                                %a{:href => "#"} Item
+                            %li
+                                %a{:href => "#"} Item
+
+                    .main-content
+                        %header.content-header
+                            %h2 Our Session and Diaconate
+                            %hr/
+
+                        %article.content-article
+                            %h3 Teaching Elders
+
+                            %ul
+                                %li Brent Baker
+                                %li Mark Davis
+                                %li Pete Deison
+                                %li Paul Goebel
+                                %li Bill Lamberth
+                                %li Tommy Overton
+                                %li Julian Russell
+                                %li Skip Ryan
+                                %li Chad Scruggs
+                                %li Jeff White
+                                %li Ron Williams
+
+                            %hr/
+                            %h3 Session
+
+                            %ul
+                                %li Tommy Bain
+                                %li Alan Balser
+                                %li Frank Bullock
+                                %li Mark Davis
+                                %li Pete Deison
+                                %li Jack Denman
+                                %li Will Francis
+                                %li Pat Hamner
+                                %li Ed Jarrett
+                                %li Jim Madden
+                                %li Bob McCamey
+                                %li David Newman
+                                %li Mike Skinner
+                                %li Dan Stewart
+                                %li Jay Turner
+                                %li Jeff Wilson
+                                %li Tim Wilson
+                                %li Randy Wood
+
+
+                %footer.sub
+                    .breadcrumb
+                        %a{:href => "#"} About
+                        %a{:href => "#"} Our Session and Diaconate
+
+
+
+        -# Site Footer
+        %footer.footer#main-footer{:role=>'contentinfo'}
+
+            .footer-links
+                %ul
+                    %li
+                        %h3 Content
+                    %li
+                        %a{:href => "#"} About
+                    %li
+                        %a{:href => "#"} About
+                    %li
+                        %a{:href => "#"} About
+                    %li
+                        %a{:href => "#"} About
+
+                %ul
+                    %li
+                        %h3 Content
+                    %li
+                        %a{:href => "#"} About
+                    %li
+                        %a{:href => "#"} About
+                    %li
+                        %a{:href => "#"} About
+                    %li
+                        %a{:href => "#"} About
+
+                %ul
+                    %li
+                        %h3 Content
+                    %li
+                        %a{:href => "#"} About
+                    %li
+                        %a{:href => "#"} About
+                    %li
+                        %a{:href => "#"} About
+                    %li
+                        %a{:href => "#"} About
+
+                %ul
+                    %li
+                        %h3 Content
+                    %li
+                        %a{:href => "#"} About
+                    %li
+                        %a{:href => "#"} About
+                    %li
+                        %a{:href => "#"} About
+                    %li
+                        %a{:href => "#"} About
+
+            %hr/
+            .footnotes
+                %h3 Park Cities Presbyterian Church &copy; 2014
+                %small
+                    A congregation of
+                    %a{:href => "#"} Presbyterian Church in America
+                %small.block
+                    %a{:href => "#"} Staff Access
+
+
+
+
+
+
+
+
+    -# Scripts
+    %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"}
+    // window.jQuery || document.write('<script src="../js/min/jquery.min.js"><\/script>')
+
+    %script{:src => "../js/min/app.min.js"}
+    %script{:src => "../js/min/sitescripts.min.js"}
+
+    -# Google Analytics
+        %script
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+
+
+
+
+

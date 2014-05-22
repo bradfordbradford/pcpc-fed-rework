@@ -1,0 +1,70 @@
+
+
+
+
+// Utility Classes //
+
+
+
+// Hide/Show
+.hide-above-tablet-p {
+    display: none !important;
+}
+.hide-below-tablet-p {
+    display: inherit !important;
+}
+.show-for-print {
+    display: none;
+}
+
+// Circle
+.circle {
+    border-radius: 1000px;
+}
+
+// Colors
+.color-text {
+    color: $base-font-color !important;
+}
+a.color-text:hover {
+    color: $blue !important;
+}
+
+// Typography
+.capital-case {
+    text-transform: capitalize;;
+}
+.serif {
+    font-family: $serif !important;
+}
+.sans {
+    font-family: $sans-serif !important;
+}
+.sans-normal {
+    font-family: $sans-serif !important;
+    font-style: normal !important;
+}
+.strong {
+    font-weight: 800 !important;
+}
+.italic {
+    font-style: italic !important;
+}
+.normal {
+    font-style: normal !important;
+    font-weight: 200 !important;
+}
+
+// Alignment
+.center {
+    text-align: center;
+    margin: inherit auto;
+}
+.right {
+    float:right;
+}
+.left {
+    float:left;
+}
+
+

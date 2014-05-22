@@ -2,3 +2,40 @@
 
 
 // Structure: Header //
+
+nav#main-navigation {
+    background: darken($dark-blue, 6);
+    border-bottom: 1px solid #233F51;
+    ol.navigation-list {
+        li.nav-item {
+            padding: 0 4px;
+
+            > a {
+                padding: 0 8px;
+                font-size: $base-font-size * 0.875;
+                color: $true-white;
+                line-height: $navbarHeight;
+                height: $navbarHeight;
+                text-transform: uppercase;
+                font-weight: 800;
+                letter-spacing: 0.02em;
+                position: relative;
+                display: block;
+                z-index: inherit;
+                &:after {
+                    content:'';
+                    height: $navbarHeight - 16px;
+                    position: absolute;
+                    background: darken($dark-blue, 12);
+                    width: 1px;
+                    right:0px;
+                    top: 9px;
+                }
+            }
+
+
+        }
+    }
+}
+
+

@@ -1,0 +1,50 @@
+a.btn {
+    $btn-height: $base-line-height * 1.5;
+
+    line-height: $btn-height;
+    padding: 0 $btn-height/2;
+    border-radius: $base-border-radius;
+    @include transition (all 0.2s ease-in-out);
+    @include prefixer(box-sizing, border-box, webkit moz spec);
+    @include user-select(none);
+    font-size: 1em;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: bottom;
+    cursor: pointer;
+    text-align: center;
+    font-family: $sans-serif;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: .06em;
+    margin: 2px auto;
+
+    // Default
+    background: $blue;
+    color: $white;
+    &:hover {
+        background: darken($blue, 8)
+    }
+
+    // Secondary
+    &.btn-secondary {
+        background: $gold;
+        color: $white;
+        &:hover {
+            background: darken($gold, 8)
+        }
+    }
+
+    // Tertiary
+    &.btn-tertiary {
+        background: $green;
+        color: $white;
+        &:hover {
+            background: darken($green, 8)
+        }
+    }
+
+
+
+}

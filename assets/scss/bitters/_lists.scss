@@ -31,13 +31,41 @@ dl {
 }
 
 
-// Border Bottom
+// Striped
+ul.striped {
+  li {
+    margin: 0 auto;
+    padding: $base-line-height/3 $base-line-height/2;
+  }
+  li:nth-child(2n+2) {
+    background: lighten($light-gray, 12);
+  }
+}
+
+// Bottom Borders
 ul.border-b {
   li {
+    margin: 0 auto;
     border-bottom: 1px solid $light-gray;
     padding: 8px 6px;
     &:last-child {
       border-bottom: 0px;
     }
+    // Active
+    &.active {
+      background: transparentize($light-gray, .8)
+    }
+  }
+}
+
+// Titles, Active
+ul {
+  li.title {
+    margin-top: 24px;
+    text-transform: uppercase;
+  }
+  // Active
+  li.active {
+    font-weight: 800;
   }
 }

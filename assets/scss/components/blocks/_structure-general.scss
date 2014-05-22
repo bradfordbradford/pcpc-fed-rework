@@ -4,7 +4,7 @@
 // Structure: General //
 
 .content-row {
-    @include clearfix;
+    @include row();
 }
 
 .outer-bounds {
@@ -12,13 +12,23 @@
 }
 
 // Move this Later
-nav.sub {
-    @include span-columns(3);
+
+#content-wrap {
+    margin-top: $navbarHeight;
 }
 
+nav.sub {
+    @include span-columns(3);
+    margin-top: 20px;
+}
 .main-content {
     @include span-columns(9);
 }
+
+.full-bleed {
+    @include span-columns(12);
+}
+
 
 footer.sub {
     @include clearfix;
