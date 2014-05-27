@@ -34,7 +34,7 @@
     height: $navbarHeight;
     z-index: inherit;
     &:hover, &:focus, &.open {
-      background: $dark-blue;
+      // background: $dark-blue;
       color: $true-white !important;
     }
   }
@@ -47,7 +47,7 @@
     margin: 0;
     padding:0 1em 1em;
     line-height: normal;
-    background: $dark-blue; // transparentize($light-gray, .8)
+    background: darken($dark-blue, 8); // transparentize($light-gray, .8)
     border-bottom: 4px solid darken($dark-blue, 12);
     cursor: default;
     visibility: hidden;
@@ -59,7 +59,7 @@
 
     &.open {
       visibility: visible;
-      top: $navbarHeight;
+      top: $navbarHeight + 1;
       max-height: 600px;
       opacity: 1;
       z-index: 1001;
@@ -107,6 +107,10 @@
         font-style: italic;
         color: $true-white;
         margin-bottom: $base-line-height;
+    }
+    p {
+      font-family: $serif;
+      padding: 0 16px 0 0;
     }
     .title {
       font-size: 1em;

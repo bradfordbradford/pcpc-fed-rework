@@ -6,7 +6,6 @@ body {
     font-size: $base-font-size;
     line-height: $base-line-height;
     font-family: $sans;
-    background: $white;
     color: $primaryText;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
@@ -16,6 +15,7 @@ body {
 
 h1,h2,h3,h4,h5,h6 {
     color: $primaryHeader;
+    letter-spacing: 0.04em;
 }
 
 

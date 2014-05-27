@@ -48,6 +48,9 @@ ul.border-b {
     margin: 0 auto;
     border-bottom: 1px solid $light-gray;
     padding: 8px 6px;
+    &:first-child {
+      padding-top: 0px;
+    }
     &:last-child {
       border-bottom: 0px;
     }
@@ -61,6 +64,7 @@ ul.border-b {
 // Titles, Active
 ul {
   li.title {
+    font-size: $base-font-size - 0.125;
     margin-top: 24px;
     text-transform: uppercase;
   }

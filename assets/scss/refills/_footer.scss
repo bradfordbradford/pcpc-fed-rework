@@ -4,11 +4,10 @@
   $footer-background: $brown url(../img/patterns/pcpc-footer.jpg) repeat;
   $footer-link-color: transparentize($footer-color, .3);
   $footer-disclaimer-color: transparentize($footer-color, .3);
-
   border-top: 1px solid darken($brown, 10%);
   background: $footer-background;
   color: $footer-color;
-  padding: $base-line-height*2 $gutter;
+  padding: $base-line-height $gutter $base-line-height*2;
   width: 100%;
 
   .footer-logo {
@@ -23,10 +22,6 @@
   .footer-links {
     @include clearfix;
     margin-bottom: $base-line-height;
-
-    @include media($medium-screen) {
-      @include shift(1);
-    }
   }
 
   ul {
@@ -62,12 +57,12 @@
     font-weight: 800;
     text-transform: uppercase;
     margin-bottom: .4em;
+    margin-top: 24px;
   }
 
   hr {
-    border: 1px solid transparentize($footer-disclaimer-color, .4);
+    border-color: transparentize($footer-disclaimer-color, .6);
     margin: 0 auto $base-line-height;
-    width: 12em;
   }
 
   p, p a, a {
@@ -91,6 +86,20 @@
       font-family: $serif;
       text-transform: none;
     }
+  }
+
+  // Lists with Bottom Border
+  ul.border-b {
+    li {
+      border-color: transparentize($footer-disclaimer-color, .6);
+    }
+  }
+
+  // Social
+  .ico {
+    font-size: $base-font-size * 1.25;
+    color: transparentize($footer-color,.4);
+    margin-right: 4px;
   }
 }
 

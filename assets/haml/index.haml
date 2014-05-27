@@ -46,22 +46,60 @@
                 .site-navigation-inner
 
                     -# Logo
-                        %header#site-title{:role => "banner"}
+                    %header#site-header{:role => "banner"}
+                        .left
                             %h1.logo
-                                %a{:href => "#"} Name
+                                %a{:href => "#"}
+                                    %span Name
+                            %dl.service-times
+                                %dt Sunday Service Times
+                                %dd 8:00 am - Communion Service
+                                %dd 9:30 am / 11:00 am
+
+                        .right
+                            .left
+                                %a{:href => "#"} Live Stream /
+                                %a{:href => "#"} Give
+                                %a.search.ico{:href => "#", :'data-icon'=>'t'}
+                            -#
+                                .search-and-submit.left
+                                    %input{:type => "search", :placeholder => "Search"}/
+                                    %button.ico-search{:type => "submit"}
+
+
 
                     -# Navigation
                     %nav#main-navigation{:role => "navigation"}
                         %ol.navigation-list
                             %li.nav-item
                                 %a{:href => "#"} About PCPC
-                            %li.nav-item
-                                %a{:href => "#"} Worship
+                                %span.mark
                                 %ol
                                     %li.nav-sub-item
                                         %header
                                             %h4 Description
-                                        %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, repellendus, deleniti, fugit, laboriosam minima atque eius voluptatibus tempora accusamus ratione eos non ipsum deserunt optio neque maiores reprehenderit necessitatibus eaque!
+                                        %p
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, repellendus, deleniti, fugit, laboriosam minima atque eius voluptatibus tempora accusamus ratione eos non ipsum deserunt optio neque maiores reprehenderit necessitatibus eaque!
+
+                                    %li.nav-sub-item
+                                        .col-six
+                                            %h4.title
+                                                %a{:href => "#"}
+                                                    Who We Are
+                                            %ol
+                                                %li
+                                                    %a{:href => "#"} Link Item
+                                                %li
+                                                    %a{:href => "#"} Link Item
+                            %li.nav-item
+                                %a{:href => "#"} Worship
+                                %span.mark
+                                %ol
+                                    %li.nav-sub-item
+                                        %header
+                                            %h4 Description
+                                        %p
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, repellendus, deleniti, fugit, laboriosam minima atque eius voluptatibus tempora accusamus ratione eos non ipsum deserunt optio neque maiores reprehenderit necessitatibus eaque!
 
                                     %li.nav-sub-item
                                         .col-six
@@ -114,16 +152,123 @@
 
                             %li.nav-item
                                 %a{:href => "#"} Grow
+                                %span.mark
+                                %ol
+                                    %li.nav-sub-item
+                                        %header
+                                            %h4 Description
+                                        %p
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, repellendus, deleniti, fugit, laboriosam minima atque eius voluptatibus tempora accusamus ratione eos non ipsum deserunt optio neque maiores reprehenderit necessitatibus eaque!
+
+                                    %li.nav-sub-item
+                                        .col-six
+                                            %h4.title
+                                                %a{:href => "#"}
+                                                    Who We Are
+                                            %ol
+                                                %li
+                                                    %a{:href => "#"} Link Item
+                                                %li
+                                                    %a{:href => "#"} Link Item
                             %li.nav-item
                                 %a{:href => "#"} Serve
+                                %span.mark
+                                %ol
+                                    %li.nav-sub-item
+                                        %header
+                                            %h4 Description
+                                        %p
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, repellendus, deleniti, fugit, laboriosam minima atque eius voluptatibus tempora accusamus ratione eos non ipsum deserunt optio neque maiores reprehenderit necessitatibus eaque!
+
+                                    %li.nav-sub-item
+                                        .col-six
+                                            %h4.title
+                                                %a{:href => "#"}
+                                                    Who We Are
+                                            %ol
+                                                %li
+                                                    %a{:href => "#"} Link Item
+                                                %li
+                                                    %a{:href => "#"} Link Item
                             %li.nav-item
                                 %a{:href => "#"} Missions
+                                %span.mark
+                                %ol
+                                    %li.nav-sub-item
+                                        %header
+                                            %h4 Description
+                                        %p
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, repellendus, deleniti, fugit, laboriosam minima atque eius voluptatibus tempora accusamus ratione eos non ipsum deserunt optio neque maiores reprehenderit necessitatibus eaque!
+
+                                    %li.nav-sub-item
+                                        .col-six
+                                            %h4.title
+                                                %a{:href => "#"}
+                                                    Who We Are
+                                            %ol
+                                                %li
+                                                    %a{:href => "#"} Link Item
+                                                %li
+                                                    %a{:href => "#"} Link Item
                             %li.nav-item
                                 %a{:href => "#"} Care
+                                %span.mark
+                                %ol
+                                    %li.nav-sub-item
+                                        %header
+                                            %h4 Description
+                                        %p
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, repellendus, deleniti, fugit, laboriosam minima atque eius voluptatibus tempora accusamus ratione eos non ipsum deserunt optio neque maiores reprehenderit necessitatibus eaque!
+
+                                    %li.nav-sub-item
+                                        .col-six
+                                            %h4.title
+                                                %a{:href => "#"}
+                                                    Who We Are
+                                            %ol
+                                                %li
+                                                    %a{:href => "#"} Link Item
+                                                %li
+                                                    %a{:href => "#"} Link Item
                             %li.nav-item
                                 %a{:href => "#"} Resources
+                                %span.mark
+                                %ol
+                                    %li.nav-sub-item
+                                        %header
+                                            %h4 Description
+                                        %p
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, repellendus, deleniti, fugit, laboriosam minima atque eius voluptatibus tempora accusamus ratione eos non ipsum deserunt optio neque maiores reprehenderit necessitatibus eaque!
+
+                                    %li.nav-sub-item
+                                        .col-six
+                                            %h4.title
+                                                %a{:href => "#"}
+                                                    Who We Are
+                                            %ol
+                                                %li
+                                                    %a{:href => "#"} Link Item
+                                                %li
+                                                    %a{:href => "#"} Link Item
                             %li.nav-item
                                 %a{:href => "#"} News/Events
+                                %ol
+                                    %li.nav-sub-item
+                                        %header
+                                            %h4 Description
+                                        %p
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, repellendus, deleniti, fugit, laboriosam minima atque eius voluptatibus tempora accusamus ratione eos non ipsum deserunt optio neque maiores reprehenderit necessitatibus eaque!
+
+                                    %li.nav-sub-item
+                                        .col-six
+                                            %h4.title
+                                                %a{:href => "#"}
+                                                    Who We Are
+                                            %ol
+                                                %li
+                                                    %a{:href => "#"} Link Item
+                                                %li
+                                                    %a{:href => "#"} Link Item
 
 
         -# Content Wrap
@@ -203,64 +348,116 @@
 
         -# Site Footer
         %footer.footer#main-footer{:role=>'contentinfo'}
+            .outer-bounds
+                .footer-links
+                    %ul.border-b
+                        %li
+                            %h3 Quick Links
+                        %li
+                            %a{:href => "#"} Home
+                        %li
+                            %a{:href => "#"} About
+                        %li
+                            %a{:href => "#"} Worship
+                        %li
+                            %a{:href => "#"} Grow
+                        %li
+                            %a{:href => "#"} Serve
+                        %li
+                            %a{:href => "#"} Missions
+                        %li
+                            %a{:href => "#"} Care
+                        %li
+                            %a{:href => "#"} Resources
+                        %li
+                            %a{:href => "#"} News/Events
+                        %li
+                            %a{:href => "#"} Give
 
-            .footer-links
-                %ul
-                    %li
-                        %h3 Content
-                    %li
-                        %a{:href => "#"} About
-                    %li
-                        %a{:href => "#"} About
-                    %li
-                        %a{:href => "#"} About
-                    %li
-                        %a{:href => "#"} About
 
-                %ul
-                    %li
-                        %h3 Content
-                    %li
-                        %a{:href => "#"} About
-                    %li
-                        %a{:href => "#"} About
-                    %li
-                        %a{:href => "#"} About
-                    %li
-                        %a{:href => "#"} About
+                    %ul
+                        %li
+                            %h3 Location & Contact
+                        %li
+                            %small
+                                %span.address 4124 Oak Lawn Avenue
+                                %br/
+                                %span.city Dallas, TX 75219
+                                %br/
+                                %a{:href => "#"} Get Directions
+                                %br/
+                                %span.phone P: (214) 224-2500
+                                %br/
+                                %span.fax F: (214) 224-2782
+                        %li
+                            %h3 Office Hours
+                        %li
+                            %small
+                                %span.hours
+                                    8:30 am to 5:00 pm
+                                    %br/
+                                    Monday through Friday
 
-                %ul
-                    %li
-                        %h3 Content
-                    %li
-                        %a{:href => "#"} About
-                    %li
-                        %a{:href => "#"} About
-                    %li
-                        %a{:href => "#"} About
-                    %li
-                        %a{:href => "#"} About
 
-                %ul
-                    %li
-                        %h3 Content
-                    %li
-                        %a{:href => "#"} About
-                    %li
-                        %a{:href => "#"} About
-                    %li
-                        %a{:href => "#"} About
-                    %li
-                        %a{:href => "#"} About
+                    %ul
+                        %li
+                            %h3 Sunday Service Times
+                        %li
+                            %small
+                                %span.hours
+                                    8:00 am - Communion Service
+                                    %br/
+                                    9:30 am / 11:00 am
+                                    %br/
+                                %a{:href => "#"} Live Video Stream of the services.
 
-            %hr/
-            .footnotes
-                %h3 Park Cities Presbyterian Church &copy; 2014
-                %small
-                    A congregation of
-                    %a{:href => "#"} Presbyterian Church in America
-                %small.block
-                    %a{:href => "#"} Staff Access
+
+                        %li
+                            %h3 Elsewhere
+                        %li
+                            %a.ico.facebook{:href => "#", :'data-icon'=>'x'}
+                            %a.ico.twitter{:href => "#", :'data-icon'=>'v'}
+                            %a.ico.vimeo{:href => "#", :'data-icon'=>'u'}
+                            %a.ico.google-plus{:href => "#", :'data-icon'=>'w'}
+
+                            %br/
+                            %small
+                                %strong More:
+                            %a{:href => "#"} Upstream,
+                            %a{:href => "#"} Issuu,
+                            %a{:href => "#"} PCPC App
+
+                    %ul
+                        %li
+                            %h3 24/7 Prayer
+                        %li
+                            %small
+                                How can our pastors pray for you?
+                                %br/
+                                %span.email.strong
+                                    E: 24/7prayer@pcpc.org
+                                %br/
+                                %span.phone P: 214-224-2680
+
+                        %li
+                            %h3 Recently
+                        %li
+                            %a{:href => "#"} The Word of God in Stained Glass
+                        %li
+                            %a{:href => "#"} Trouble Now – Glory Then
+                        %li
+                            %a{:href => "#"} Seven devotionals for times of suffering
+
+
+                %hr.fullbleed/
+                .footnotes
+                    %h3 Park Cities Presbyterian Church &copy; 2014
+                    %small
+                        A congregation of
+                        %a{:href => "#"} Presbyterian Church in America
+                    %br/
+                    %small
+                        %a{:href => "#"} Staff Access
 
 
 

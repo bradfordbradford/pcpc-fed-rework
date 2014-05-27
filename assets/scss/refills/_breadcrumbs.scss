@@ -41,12 +41,13 @@
     }
 
     &:hover {
-      color: $breadcrumb-color-hover;
-      background-color: $breadcrumb-inactive-hover-color;
+      // color: $breadcrumb-color-hover;
+      color: darken($breadcrumb-color, 10);
+      // background-color: $breadcrumb-inactive-hover-color;
     }
 
     &:hover:after {
-      border-left-color: $breadcrumb-inactive-hover-color;;
+      border-left-color: $breadcrumb-inactive-hover-color;
     }
 
     &:after,

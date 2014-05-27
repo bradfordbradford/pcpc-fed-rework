@@ -1,14 +1,12 @@
+@charset "UTF-8";
 
-
-
-// Icons //
 @font-face {
   font-family: "all-purpose";
-  src:url("../fonts/all-purpose/all-purpose.eot");
-  src:url("../fonts/all-purpose/all-purpose.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/all-purpose/all-purpose.woff") format("woff"),
-    url("../fonts/all-purpose/all-purpose.ttf") format("truetype"),
-    url("../fonts/all-purpose/all-purpose.svg#all-purpose") format("svg");
+  src:url("all-purpose/all-purpose.eot");
+  src:url("all-purpose/all-purpose.eot?#iefix") format("embedded-opentype"),
+    url("all-purpose/all-purpose.woff") format("woff"),
+    url("all-purpose/all-purpose.ttf") format("truetype"),
+    url("all-purpose/all-purpose.svg#all-purpose") format("svg");
   font-weight: normal;
   font-style: normal;
 

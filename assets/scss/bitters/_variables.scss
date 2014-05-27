@@ -11,11 +11,13 @@ $header-font-family: $base-font-family;
 $base-font-size: 1em;
 $base-line-height: $base-font-size * 1.5;
 $base-border-radius: em(8);
-$navbarHeight: 54px;
+$navbarHeight: 48px;
+$siteHeaderHeight: 88px;
 
 // Colors
 ///////////////////////////////////////////////////////////////////////////////
 
+$light-blue: #B6DEF3;
 $blue: #176f9f;
 $dark-blue: #3A6887;
 $dark-gray: #545454;
@@ -29,7 +31,7 @@ $true-white: #fff;
 $white: #f1f1f1;
 
 // Body Color
-$base-body-color: white;
+$base-body-color: #F3F4F1;
 
 //  Font Colors
 $base-font-color: $dark-gray;

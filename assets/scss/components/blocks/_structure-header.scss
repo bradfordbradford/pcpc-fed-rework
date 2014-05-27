@@ -1,38 +1,108 @@
-
+// Wrap
+#main-site-navigation-wrap {
+    background: darken($dark-blue, 16);
+}
 
 
 // Structure: Header //
+header#site-header {
+    height:$siteHeaderHeight;
+    line-height: $siteHeaderHeight;
+    overflow: hidden;
+    @include outer-container();
+    color:white;
 
+    // Logo
+    .logo {
+        float: left;
+        letter-spacing: 0;
+        margin:0;
+        line-height: 0;
+
+        a {
+            display: inline-block;
+            background: url(../img/logos/logo+@2x.png) no-repeat;
+            width:102px;
+            height:56px;
+            margin-top: 16px;
+        }
+        span {
+            position: absolute;
+            left: -9999px;
+        }
+    }
+
+    // DL
+    dl.service-times {
+        float: left;
+        margin: 6px 0 0 16px;
+        font-size: $base-font-size - 0.15;
+        line-height: 1.25em;
+        dt {
+            color: $light-blue;
+        }
+    }
+
+    // Links
+    a {
+        font-size: $base-font-size - 0.15;
+        color: $light-blue;
+        font-weight: 700;
+        text-transform: uppercase;
+        &:hover {
+            color: lighten($light-blue, 12);
+        }
+    }
+
+    // Search
+    .ico.search {
+        margin: 0 0 0 16px;
+        position: relative;
+        top: 2px;
+    }
+    .search-and-submit {
+        input {}
+        button {}
+    }
+
+
+}
+
+
+
+// Structure: Main Navigation //
 nav#main-navigation {
-    background: darken($dark-blue, 6);
+    background: $dark-blue;
     border-bottom: 1px solid #233F51;
     ol.navigation-list {
         li.nav-item {
-            padding: 0 4px;
+            margin: 0 0 0 -4px;
+
+            span.mark {
+                position: relative;
+                display: inline-block;
+                height: 30px;
+                border-right: 1px solid darken($dark-blue, 12);
+                right:0px;
+                top: 12px;
+            }
 
             > a {
-                padding: 0 8px;
+                padding: 0 20px;
+                margin: 0 -4px 0 0;
                 font-size: $base-font-size * 0.875;
                 color: $true-white;
                 line-height: $navbarHeight;
-                height: $navbarHeight;
                 text-transform: uppercase;
                 font-weight: 800;
-                letter-spacing: 0.02em;
+                display: inline-block;
                 position: relative;
-                display: block;
-                z-index: inherit;
-                &:after {
-                    content:'';
-                    height: $navbarHeight - 16px;
-                    position: absolute;
-                    background: darken($dark-blue, 12);
-                    width: 1px;
-                    right:0px;
-                    top: 9px;
-                }
+                top: -2px;
             }
 
+            ol.open {
+                // ADD TICK MARK
+            }
 
         }
     }
