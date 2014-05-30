@@ -1,6 +1,7 @@
-header.navigation {
+// header.navigation {
+.js-mobile-menu-wrap {
   $navigation-padding: 1em;
-  $navigation-background: $dark-gray;
+  $navigation-background: $dark-blue;
   $navigation-color: transparentize(white, 0.3);
   $navigation-color-hover: white;
   $navigation-height: 60px;
@@ -11,14 +12,66 @@ header.navigation {
   $navigation-search-border: 1px solid darken($navigation-background, 5);
   $navigation-active-link-color: transparentize(white, 0.5);
   $navigation-submenu-padding: 1em;
-  $horizontal-bar-mode: $large-screen;
+  $horizontal-bar-mode: $laptop;
 
-  background-color: $navigation-background;
-  border-bottom: 1px solid darken($navigation-background, 10);
-  font-family: $sans-serif;
-  height: $navigation-height;
-  width: 100%;
-  z-index: 999;
+  // background-color: $navigation-background;
+  // border-bottom: 1px solid darken($navigation-background, 10);
+  // font-family: $sans-serif;
+  // height: $navigation-height;
+  // width: 100%;
+  // z-index: 999;
+
+
+  // Menu Toggle
+  display: none;
+  #js-mobile-menu {
+    cursor: pointer;
+    @include clearfix;
+    @include transition(background .2s ease-in-out);
+    background: $navigation-background;
+    border-bottom:1px solid darken($dark-blue, 15%);
+    padding: $base-line-height/2 $gutter;
+    display: block;
+    font-size: $base-font-size - 0.15;
+    color: $true-white;
+    font-weight: 700;
+    text-transform: uppercase;
+    .menu-prompt {
+      float:left;
+    }
+    .menu.icon {
+      float:right;
+      position: relative;
+      top: 2px;
+      @include transition(transform .2s ease-in-out);
+    }
+
+    // Open, Hover
+    &.active-menu {
+      background: darken($navigation-background, 4%);
+      .menu.icon {
+        @include transform(translate(0px, -6px) rotate(-180deg));
+      }
+    }
+    &.active-menu:hover {
+      background: darken($navigation-background, 4%);
+    }
+
+  }
+
+  // Search
+  .search-and-submit {
+    @include clearfix;
+    margin: $base-line-height 0;
+    button {
+      @include span-columns(2);
+      background: darken($navigation-background, 4%);
+    }
+    input {
+      @include span-columns(10);
+    }
+  }
+
 
   .menu-wrapper {
     @include outer-container;
@@ -27,17 +80,17 @@ header.navigation {
     z-index: 9999;
   }
 
-  .logo {
-    float: left;    
-    max-height: $navigation-height;
-    padding-left: $navigation-padding;
-    padding-right: 2em;
+  // .logo {
+  //   float: left;
+  //   max-height: $navigation-height;
+  //   padding-left: $navigation-padding;
+  //   padding-right: 2em;
 
-    img {
-      max-height: $navigation-height;
-      padding: .8em 0;
-    }
-  }
+  //   img {
+  //     max-height: $navigation-height;
+  //     padding: .8em 0;
+  //   }
+  // }
 
   .navigation-menu-button {
     color: $navigation-color;
@@ -60,15 +113,15 @@ header.navigation {
     }
   }
 
-  .nav {
-    z-index: 9999999;
-    float: none;
-    @include media ($horizontal-bar-mode) {
-      float: left;
-    }
-  }
+  // .nav {
+  //   z-index: 9999999;
+  //   float: none;
+  //   @include media ($horizontal-bar-mode) {
+  //     float: left;
+  //   }
+  // }
 
-  ul#navigation-menu {    
+  ul#navigation-menu {
     clear: both;
     -webkit-transform-style: preserve-3d; // stop webkit flicker
     display: none;
@@ -78,11 +131,11 @@ header.navigation {
     width: 100%;
     z-index: 9999;
 
-    @include media ($horizontal-bar-mode) {
-      display: inline;
-      margin: 0;
-      padding: 0;
-    }
+    // @include media ($horizontal-bar-mode) {
+    //   display: inline;
+    //   margin: 0;
+    //   padding: 0;
+    // }
   }
 
   ul li {
@@ -90,8 +143,8 @@ header.navigation {
     display: block;
     line-height: $navigation-height;
     overflow: hidden;
-    padding-right: .8em;
-    text-align: right;
+    padding: 0 $gutter;
+    text-align: left;
     width: 100%;
     z-index: 9999;
 
@@ -105,12 +158,16 @@ header.navigation {
     }
 
     a {
-      font-weight: 400;
-      color: $navigation-color;
-
-      &:hover {
-        color: $navigation-color-hover;
-      }
+      font-size: $base-font-size - 0.15;
+      color: $true-white;
+      font-weight: 700;
+      text-transform: uppercase;
+      display: block;
+      width: 100%;
+      border-bottom:1px solid darken($dark-blue, 15%);
+        &:hover {
+            color: lighten($light-blue, 12);
+        }
     }
   }
 
@@ -163,7 +220,7 @@ header.navigation {
       }
 
       a {
-        text-align: right;
+        text-align: left;
         background-color: darken($navigation-background, 3);
         width: 100%;
         display: inline-block;
@@ -186,7 +243,7 @@ header.navigation {
     clear: both;
     background: #505050;
 
-    @include media($large-screen) {
+    @include media($laptop) {
       background: transparent;
       float: right;
       clear: none;
@@ -199,14 +256,14 @@ header.navigation {
     @include transition (all 0.2s ease-in-out);
     display: inline;
     background: $navigation-nav-button-background;
-    border-radius: $base-border-radius; 
+    border-radius: $base-border-radius;
     color: white;
-    font-size: .8em;  
+    font-size: .8em;
     font-weight: 800;
     text-transform: uppercase;
     padding: .4em .5em;
 
-    @include media($large-screen) {
+    @include media($laptop) {
       padding: .4em 1em;
     }
 
@@ -220,7 +277,7 @@ header.navigation {
     $search-bar-border: 1px solid $search-bar-border-color;
     $search-bar-background: lighten($search-bar-border-color, 10);
 
-    padding: 13px 5px; 
+    padding: 13px 5px;
     float: left;
     .search-and-submit {
       position: relative;
@@ -251,7 +308,7 @@ header.navigation {
 
     @include media($horizontal-bar-mode) {
       width: 16em;
-      position: relative; 
+      position: relative;
       display: inline-block;
 
       input {

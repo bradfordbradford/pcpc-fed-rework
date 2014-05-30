@@ -5,9 +5,28 @@
 
 
 
+@include media($ipad-portrait-down) {
 
-// @include breakpoint(name-of-breakpoint) { // ---- Down/Up/Between number-of-pixels ----
-//     // Note: What this does…
-// }
+    // General
+    nav.sub,
+    .main-content {
+        @include fill-parent;
+    }
 
+    .main-content {
+        border-bottom: 1px solid $base-border-color;
+        padding-bottom: $base-line-height;
+    }
+    nav.sub {
+        margin-top: $base-line-height * 4;
+    }
 
+    // Utility Hide/Show
+    .hide-on-tablet {
+        display: none !important;
+    }
+    .show-on-tablet {
+        display: inherit !important;
+    }
+
+}

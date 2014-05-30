@@ -1,3 +1,6 @@
+//  Buttons
+///////////////////////////////////////////////////////////////////////////////
+
 a.btn {
     $btn-height: $base-line-height * 1.5;
 
@@ -7,7 +10,7 @@ a.btn {
     @include transition (all 0.2s ease-in-out);
     @include prefixer(box-sizing, border-box, webkit moz spec);
     @include user-select(none);
-    font-size: 1em;
+    font-size: $base-font-size * .875;
     text-decoration: none;
     display: inline-block;
     vertical-align: bottom;
@@ -45,6 +48,19 @@ a.btn {
         }
     }
 
+    // Neutral
+    &.btn-neutral {
+        background: transparentize($light-gray, .6);
+        color: lighten($medium-gray, 2);
+        border: 1px solid $light-gray;
+        &:hover {
+            background: transparentize($light-gray, .4);
+        }
+    }
 
+    // Small
+    &.btn-large {
+        font-size: $base-font-size;
+    }
 
 }

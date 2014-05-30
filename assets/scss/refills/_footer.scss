@@ -27,9 +27,8 @@
   ul {
     margin-bottom: $base-line-height*2;
 
-    @include media($medium-screen) {
+    @include media($ipad-portrait) {
       @include span-columns(3);
-      // @include omega(3n);
       @include clearfix;
     }
   }
@@ -37,7 +36,7 @@
   li {
     text-align: center;
 
-    @include media($medium-screen) {
+    @include media($ipad-portrait) {
       text-align: left;
     }
   }
