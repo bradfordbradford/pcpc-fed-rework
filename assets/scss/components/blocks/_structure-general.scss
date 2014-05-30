@@ -2,7 +2,9 @@
 
 
 // Structure: General //
-
+html, body {
+    background: $base-body-color;
+}
 .content-row {
     @include row();
 }

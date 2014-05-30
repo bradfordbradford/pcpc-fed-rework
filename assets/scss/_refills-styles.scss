@@ -100,7 +100,6 @@
 }
 
 $refills-color: lighten(desaturate(teal, 60), 40);
-$base-body-color: white;
 $refills-nav-height: 60px;
 $refills-anchor-color: #FF4286;
 
@@ -124,7 +123,6 @@ $refills-anchor-color: #FF4286;
 }
 
 body {
-  background: $base-body-color;
   min-width: 320px;
   -webkit-backface-visibility: hidden;
 }
