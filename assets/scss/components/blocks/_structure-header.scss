@@ -1,7 +1,7 @@
 // Wrap
 #main-site-navigation-wrap {
     background: darken($dark-blue, 16);
-
+    @include transition(opacity .15s ease-in);
 }
 
 

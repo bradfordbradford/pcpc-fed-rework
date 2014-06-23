@@ -10,7 +10,8 @@ $(document).ready(function($) {
     }, 500);
 
     // Menu ----------
-    $('html.js #main-navigation').accessibleMegaMenu();
+    $('#main-navigation').accessibleMegaMenu();
+    $('#main-navigation').addClass('run');
 
 
     // Mobile Menu ----------

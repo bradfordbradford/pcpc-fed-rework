@@ -3,13 +3,20 @@
 
 // Hide Content Fast, prevent FUOC before JS loads
 
-body.init {
-    .accessible-megamenu .accessible-megamenu-panel {
-        display: none !important;
+html.js body.init {
+    #main-site-navigation-wrap {
+        opacity: 0;
     }
     .main-content {
         opacity: 0;
         @include transform(translate(0, 6px));
+    }
+}
+
+#main-navigation {
+    display: none !important;
+    &.run {
+        display: inherit !important;
     }
 }
 
