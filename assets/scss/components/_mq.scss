@@ -30,3 +30,47 @@
     }
 
 }
+
+
+@include media($phone-down) {
+    h1 {
+      font-size: $base-font-size * 2; // 16 * 2 = 32px
+    }
+
+    h2 {
+      font-size: $base-font-size * 1.5; // 16 * 1.5 = 24px
+    }
+
+    h3 {
+      font-size: $base-font-size * 1.25; // 16 * 1.125 = 20px
+    }
+
+    h4 {
+      font-size: $base-font-size * 1.125; // 16 * 1.125 = 18px
+    }
+
+    h5 {
+      font-size: $base-font-size; // 16
+    }
+
+    h6 {
+      font-size: $base-font-size; // 16
+    }
+
+    .content-header {
+        h2 {
+            font-size: $base-font-size * 2; // 16 * 2 = 32px
+        }
+    }
+
+    p {
+      margin: 0 0 ($base-line-height * .5);
+
+      // Lead Copy
+      &.lead {
+        font-size: $base-font-size * 1.25; // 16 * 1.25 = 20px
+        line-height: 1.25em;
+        color: $blue;
+      }
+    }
+}

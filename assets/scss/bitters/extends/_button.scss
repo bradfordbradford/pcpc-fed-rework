@@ -16,3 +16,10 @@
     font-weight: bold;
     line-height: 1em;
 }
+
+
+@include media($phone-down) {
+    %button {
+        padding: 7px 2px;
+    }
+}

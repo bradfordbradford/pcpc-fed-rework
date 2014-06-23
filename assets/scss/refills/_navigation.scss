@@ -165,9 +165,10 @@
       display: block;
       width: 100%;
       border-bottom:1px solid darken($dark-blue, 15%);
-        &:hover {
-            color: lighten($light-blue, 12);
-        }
+      &.current,
+      &:hover {
+          color: darken($dark-blue, 20);
+      }
     }
   }
 

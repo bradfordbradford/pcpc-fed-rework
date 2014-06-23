@@ -6,14 +6,15 @@
 
 
 @import
+    // BOURBON
+    'bourbon/bourbon'
+    ,'neat/neat'
 
     // RESET, FOUC
-    'normalize'
+    ,'normalize'
     ,'components/no-fouc'
 
-    // BOURBON
-    ,'bourbon/bourbon'
-    ,'neat/neat'
+    // MORE BOURBON
     ,'bitters/bitters'
     ,'refills/refills'
 

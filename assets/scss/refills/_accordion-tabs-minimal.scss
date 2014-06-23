@@ -5,7 +5,7 @@
   $tab-active-background: $tab-content-background;
   $tab-inactive-color: $base-body-color;
   $tab-inactive-hover-color: darken($light-gray, 5);
-  $tab-mode: $medium-screen;
+  $tab-mode: $ipad-portrait;
 
   @include clearfix;
   border: $tab-border;
@@ -23,14 +23,14 @@
     }
 
     &:first-child a.tab-link {
-      border-top-left-radius: $base-border-radius; 
-      border-top-right-radius: $base-border-radius; 
+      border-top-left-radius: $base-border-radius;
+      border-top-right-radius: $base-border-radius;
       border-top: 0;
     }
 
     &:last-child a.tab-link {
-      border-bottom-left-radius: $base-border-radius; 
-      border-bottom-right-radius: $base-border-radius; 
+      border-bottom-left-radius: $base-border-radius;
+      border-bottom-right-radius: $base-border-radius;
 
       @include media($tab-mode) {
         border-bottom-left-radius: 0;
@@ -58,8 +58,8 @@
       color: $base-link-color;
     }
 
-    &:focus { 
-      outline: none; 
+    &:focus {
+      outline: none;
     }
 
     &.is-active {
@@ -75,7 +75,7 @@
     }
   }
 
-  li.tab-header-and-content section {
+  li.tab-header-and-content .tab-content {
     padding: $base-line-height $gutter;
     background: $tab-content-background;
     display: none;

@@ -29,6 +29,18 @@ $(document).ready(function($) {
     });
 
 
+    // Search
+    $('.js-search-trigger').on('click touchstart', function(e){
+      $('.js-search').toggleClass('is-visible');
+      e.preventDefault();
+    });
+
+    $('#content-wrap').on('click touchstart', function(e){
+      $('.js-search').removeClass('is-visible');
+      e.preventDefault();
+    });
+
+
     // underline under the active nav item
     $(".nav .nav-link").click(function() {
     $(".nav .nav-link").each(function() {
@@ -52,6 +64,26 @@ $(document).ready(function($) {
           // history.replaceState({}, '', '/');
       });
     });
+
+    // Horizontal Tabs
+     $('.accordion-tabs-minimal').each(function(index) {
+        $(this).children('li').first().children('a').addClass('is-active').next().addClass('is-open').show();
+      });
+
+      $('.accordion-tabs-minimal').on('click', 'li > a', function(event) {
+        if (!$(this).hasClass('is-active')) {
+          event.preventDefault();
+          var accordionTabs = $(this).closest('.accordion-tabs-minimal')
+          accordionTabs.find('.is-open').removeClass('is-open').hide();
+
+          $(this).next().toggleClass('is-open').toggle();
+          accordionTabs.find('.is-active').removeClass('is-active');
+          $(this).addClass('is-active');
+        } else {
+          event.preventDefault();
+        }
+    });
+
 
 
     // // Toggle View All ----------

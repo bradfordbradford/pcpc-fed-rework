@@ -3,10 +3,13 @@
 
 // Hide Content Fast, prevent FUOC before JS loads
 
-// body.init {
-//     #stuff-to-hide-while-js-loads{
-//         display:none !important;
-//     }
-// }
-
+body.init {
+    .accessible-megamenu .accessible-megamenu-panel {
+        display: none !important;
+    }
+    .main-content {
+        opacity: 0;
+        @include transform(translate(0, 6px));
+    }
+}
 

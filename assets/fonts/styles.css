@@ -92,3 +92,18 @@
 .ico-facebook-circled:before {
   content: "x";
 }
+.ico-cloud-download-2:before {
+  content: "a";
+}
+.ico-play-1:before {
+  content: "b";
+}
+.ico-pause-1:before {
+  content: "c";
+}
+.ico-off-volume-2:before {
+  content: "d";
+}
+.ico-off-volume-1:before {
+  content: "e";
+}

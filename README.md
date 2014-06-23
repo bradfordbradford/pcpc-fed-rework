@@ -11,7 +11,7 @@ Park Cities Presbyterian FED
 What is this?
 -------------
 
-This is the FED for the pcpc.org.
+This is the FED for the pcpc.org. Check it out: http://bradfordbradford.github.io/pcpc-fed-rework/
 
 
 What's it built with?

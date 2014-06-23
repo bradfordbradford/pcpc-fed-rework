@@ -26,6 +26,9 @@ nav.sub {
 }
 .main-content {
     @include span-columns(9);
+    @include transition(opacity .3s ease-in, transform .3s ease-in);
+    opacity: 1;
+    @include transform(translate(0px, 0px));
 }
 
 .full-bleed {
