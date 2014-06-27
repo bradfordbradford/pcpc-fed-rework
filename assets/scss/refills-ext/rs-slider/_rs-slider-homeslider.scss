@@ -1,5 +1,9 @@
 // Royal Slider v1.0.5 - Home Slider Styles
 // ---------------------------------------------
+.slider-bounds {
+  @include outer-container();
+  padding: 0 $gutter;
+}
 
 #homeSlider {
   margin-bottom: $base-line-height;
@@ -113,8 +117,17 @@
 }
 
 @include media($phone-down) {
+  .slider-bounds {
+    @include fullBleed();
+    padding: 0;
+  }
+
+  .slider-wrap {
+    margin-top: 0px !important;
+  }
+
   .royalSlider {
-    height: 360px !important;
+    height: 372px !important;
   }
   .slideContentWrap,
   .rsFirstSlideTitle {

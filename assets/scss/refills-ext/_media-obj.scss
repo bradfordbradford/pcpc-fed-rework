@@ -4,6 +4,7 @@
   $media-detail-color: transparentize($media-color, .5);
   $media-image-vert-alignment: top;
 
+  @include row($direction: RTL);
   display: table;
   width: 100%;
   margin-bottom: $base-line-height;
@@ -48,5 +49,22 @@
       color: $media-detail-color;
     }
   }
+
+  // Below Ipad Portrait
+  @include media($ipad-portrait-down) {
+    &:last-child {
+      border-bottom: 0px;
+    }
+    .media-image {
+      @include fullBleed;
+      width: 80%;
+      margin: 16px auto 24px;
+    }
+    .media-content {
+      @include fullBleed;
+    }
+  }
+
 }
+
 

@@ -78,7 +78,19 @@ $media-btn-hover-background: lighten($media-btn-background, 5);
 .progression-skin .mejs-inner .mejs-controls .mejs-time.mejs-duration-container {margin-right:0px !important; border-right:0px !important;}
 }
 
+@include media($swap-site-nav) {
+    .mejs-container {
+        float: none !important;
+        display: block !important;
+        width: 80% !important;
+    }
+    .btn.media-btn.download {
+        float:none !important;
+        margin: $base-line-height 0 !important;
+    }
+}
 
+@include media($phone-down) {}
 
 // =============================================== 04. Font Icons + CSS Transitions ===============================================
 

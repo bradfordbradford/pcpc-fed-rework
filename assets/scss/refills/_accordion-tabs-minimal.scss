@@ -6,6 +6,9 @@
   $tab-inactive-color: $base-body-color;
   $tab-inactive-hover-color: darken($light-gray, 5);
   $tab-mode: $ipad-portrait;
+  $tab-active-background-mobile: $true-white;
+  $tab-inactive-color-mobile: darken($true-white, 2%);
+  $tab-is-open-background-mobile: $true-white;
 
   @include clearfix;
   border: $tab-border;
@@ -17,6 +20,8 @@
   }
 
   li.tab-header-and-content {
+    list-style: none;
+    margin: 0 auto;
 
     @include media($tab-mode) {
       display: inline;
@@ -40,18 +45,20 @@
   }
 
   li.tab-header-and-content a.tab-link {
-    background-color: $tab-inactive-color;
+    background-color: $tab-inactive-color-mobile;
+    color: $medium-gray;
     border-top: $tab-border;
-    color: $dark-gray;
     display: block;
     font-weight: 400;
     padding: $base-line-height/2 $gutter;
 
     @include media($tab-mode) {
+      background-color: $tab-content-background;
       @include inline-block;
       border-top: 0;
       border-top-right-radius: $base-border-radius;
       border-top-left-radius: $base-border-radius;
+
     }
 
     &:hover {
@@ -63,8 +70,10 @@
     }
 
     &.is-active {
-      background-color: $tab-active-background;
+      background-color: $tab-active-background-mobile;
       border-bottom: 0;
+      font-weight: 800;
+      color: $dark-gray;
 
       @include media($tab-mode) {
         background-color: $tab-active-background;
@@ -82,7 +91,15 @@
     overflow: hidden;
     width: 100%;
 
+    &.is-open {
+      background: $tab-is-open-background-mobile;
+    }
+
     @include media($tab-mode) {
+      &.is-open {
+        background: $tab-content-background;
+      }
+
       border-top: $tab-border;
       float: left;
       left: 0;
