@@ -2,18 +2,19 @@
 #burnlist.md
 
 ## Do
-- homepage: add additional content modules below homeslider
-- homepage: homeslider fix FOUC
-- audio page: mobile
-- fullbleed-list: mobile
-- livestream fullbleed: mobile
-- audio player: add Flash Audio player fallback
+- audio page: check ie8 for audio fallback
 - General: Debug
 - General: Revisions
 
 
 ## Done
 _Features_
+- -livestream fullbleed: mobile [x]-
+- -audio page: mobile [x]-
+- -fullbleed-list: mobile [x]-
+- -audio player: add Flash Audio player fallback [x]-
+- -homepage: add additional content modules below homeslider [x]-
+- -homepage: homeslider fix FOUC [x]-
 - -Home Layout tweaks : #content-wrap and js-search.click causes mobile bugs [x]-
 - -Home Layout [x]-
 - -Tables [x]-

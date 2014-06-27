@@ -30,7 +30,6 @@
     }
 
     // Utility Grid
-
     .col-one,
     .col-two,
     .col-three,
@@ -51,6 +50,7 @@
 
 
 @include media($phone-down) {
+    // Typography
     h1 {
       font-size: $base-font-size * 2; // 16 * 2 = 32px
     }
@@ -78,6 +78,11 @@
     .content-header {
         h2 {
             font-size: $base-font-size * 2; // 16 * 2 = 32px
+            float:none;
+        }
+        .options {
+            float: none;
+            margin: $base-line-height auto $base-line-height/2;
         }
     }
 
