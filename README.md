@@ -7,11 +7,12 @@ Park Cities Presbyterian FED
 * [What is this?](#what-is-this)
 * [What's it built with?](#what-is-this)
 * [What's included?](#what-is-this)
+* [Track Progress](#track-progress)
 
 What is this?
 -------------
 
-This is the FED for the pcpc.org.
+This is the FED for the pcpc.org. Check it out: http://bradfordbradford.github.io/pcpc-fed-rework/
 
 
 What's it built with?
@@ -39,3 +40,9 @@ What's included?
 -------------
 
 …coming soon…
+
+Track Progress
+-------------
+
+Follow along with the latest via the [Burnlist](http://bradfordbradford.github.io/pcpc-fed-rework/burnlist.md)
+
