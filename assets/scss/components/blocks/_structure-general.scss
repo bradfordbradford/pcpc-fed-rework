@@ -8,29 +8,39 @@ html, body {
 .content-row {
     @include row();
 }
-
 .outer-bounds {
-    @include outer-container()
+    @include outer-container();
+    padding: 0 $gutter;
 }
 
 // Move this Later
 
 #content-wrap {
     margin-top: $navbarHeight;
+    position: relative;
+    z-index: 1000;
 }
 
 nav.sub {
     @include span-columns(3);
     margin-top: 20px;
+    @include row($direction: RTL);
 }
 .main-content {
     @include span-columns(9);
+    @include transition(opacity .3s ease-in, transform .3s ease-in);
+    opacity: 1;
+    @include transform(translate(0px, 0px));
 }
 
 .full-bleed {
     @include span-columns(12);
 }
 
+#jump-to-nav {
+    margin-bottom: $base-line-height;
+    @include clearfix;
+}
 
 footer.sub {
     @include clearfix;

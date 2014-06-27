@@ -7,11 +7,11 @@
 
 
 // Hide/Show
-.hide-above-tablet-p {
-    display: none !important;
-}
-.hide-below-tablet-p {
+.hide-on-tablet {
     display: inherit !important;
+}
+.show-on-tablet {
+    display: none !important;
 }
 .show-for-print {
     display: none;
@@ -65,6 +65,14 @@ a.color-text:hover {
 }
 .left {
     float:left;
+}
+
+// Padding
+.padding-b {
+    padding-bottom: $base-line-height;
+}
+.padding-t {
+    padding-bottom: $base-line-height;
 }
 
 

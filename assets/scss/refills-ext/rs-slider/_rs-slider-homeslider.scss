@@ -1,0 +1,126 @@
+// Royal Slider v1.0.5 - Home Slider Styles
+// ---------------------------------------------
+
+#homeSlider {
+  margin-bottom: $base-line-height;
+  width: 100%;
+  .rsThumbsHor {
+    height: auto;
+    padding: 0;
+  }
+}
+
+#homeSlider {
+  .slideLink {
+    padding: 5px 12px 6px;
+    color: #BB0202;
+    background: #FFF;
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    text-decoration: none;
+    font-weight: normal;
+  }
+  > .rsContent {
+    height: auto;
+  }
+}
+
+.royalSlider > .rsContent {
+  h1, h2, img, .slideLink {
+    display: none;
+  }
+}
+
+#homeSlider .slideLink:hover {
+  text-decoration: none;
+  background: #C00;
+  color: #FFF;
+}
+
+.rsWebkit3d .slideLink {
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+}
+
+#homeSlider {
+  .rsThumbsContainer {
+    width:100% !important;
+  }
+  .rsThumb {
+    float:left;
+    width: 24.25%;
+    margin: 0 1% 0 0;
+    cursor: pointer;
+    &:first-child {
+      margin: 0 1% 0 -1.3%;
+    }
+  }
+  .rsTmb {
+    text-align: center;
+    margin-top: 11px;
+    font-weight: bold;
+    display: block;
+    img {
+      max-width: 100%;
+    }
+  }
+  .rsThumb i {
+    font-style: normal;
+    font-weight: bold;
+  }
+}
+
+.rsSlideTitle {
+  padding: ($base-line-height / 4) $base-line-height ($base-line-height / 3);
+  background: transparentize(black, .75);
+  h1,h2,h3,h4,h5,h6,p {
+    color: $white;
+  }
+  h1,h2,h3,h4,h5,h6 {
+    font-family: $serif;
+    font-weight:400;
+  }
+}
+
+.slideContentWrap {
+  background: transparentize(black, .75);
+  padding: ($base-line-height / 1.5) $base-line-height ($base-line-height / 2);
+  left: 3%;
+  top: inherit;
+  bottom: 7%;
+  max-width: 75%;
+  h1,h2,h3,h4,h5,h6 {
+    font-family: $serif;
+    font-weight:400;
+  }
+  h1,h2,h3,h4,h5,h6,p {
+    color: $white;
+  }
+  hr {
+    margin: $base-line-height/2 0;
+  }
+}
+
+.rsFirstSlideTitle {
+  left: 3%;
+  top: 24px;
+}
+
+.rsSecondSlideTitle {
+  left: 3%;
+  top: 84px;
+}
+
+@include media($phone-down) {
+  .royalSlider {
+    height: 360px !important;
+  }
+  .slideContentWrap,
+  .rsFirstSlideTitle {
+    left: 6%;
+  }
+  .rsSecondSlideTitle {
+    display: none !important;
+  }
+}

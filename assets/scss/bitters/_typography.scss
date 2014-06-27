@@ -43,7 +43,7 @@ p {
 
   // Lead Copy
   &.lead {
-    font-size: $base-font-size * 1.75;
+    font-size: $base-font-size * 1.75; // 16 * 1.75 = 28px
     line-height: 1.25em;
     color: $blue;
   }

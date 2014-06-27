@@ -6,25 +6,27 @@
 
 
 @import
+    // BOURBON
+    'bourbon/bourbon'
+    ,'neat/neat'
 
     // RESET, FOUC
-    'normalize'
+    ,'normalize'
     ,'components/no-fouc'
 
-    // BOURBON
-    ,'bourbon/bourbon'
-    ,'neat/neat'
+    // MORE BOURBON
     ,'bitters/bitters'
     ,'refills/refills'
 
 
     // COMPONENTS
+    ,'set-mixins'
     ,'refills-ext/refills-ext'
     ,'components/import-blocks'
 
 
     // MQ, PRINT
-    // ,'components/mq'
+    ,'components/mq'
     // ,'components/print'
 
 

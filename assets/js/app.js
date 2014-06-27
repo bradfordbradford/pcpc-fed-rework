@@ -10,27 +10,54 @@ $(document).ready(function($) {
     }, 500);
 
     // Menu ----------
-    $('html.js #main-navigation').accessibleMegaMenu();
+    $('#main-navigation').accessibleMegaMenu();
+    $('#main-navigation').addClass('run');
 
 
-    // Toggle Class based on Scroll Position (nav changes) ----------
-    // var mainNav = $('#main-site-navigation-wrap');
-    // $(window).scroll(function () {
-    //     var scroll = $(window).scrollTop();
-    //     if (scroll >= 640) {
-    //         mainNav.removeClass('menu-thick').addClass('menu-slim');
-    //     }
-    //     if (scroll < 640) {
-    //         mainNav.removeClass('menu-slim').addClass('menu-thick');
-    //     }
+    // Mobile Menu ----------
+    var menu = $('#navigation-menu');
+    var menuToggle = $('#js-mobile-menu');
+    var signUp = $('.sign-up');
+
+    $(menuToggle).on('click', function(e) {
+    e.preventDefault();
+    $(this).toggleClass("active-menu");
+    menu.slideToggle(function(){
+      if(menu.is(':hidden')) {
+        menu.removeAttr('style');
+      }
+    });
+    });
+
+
+    // Search
+    $('.js-search-trigger').on('click touchstart', function(e){
+      $('.js-search').toggleClass('is-visible');
+      $('#js-search-overlay').addClass('is-visible');
+      e.preventDefault();
+
+    });
+    $('#js-search-overlay').on('click touchstart', function(e){
+      $('.js-search').removeClass('is-visible');
+      $(this).removeClass('is-visible');
+      e.preventDefault();
+    });
+
+    // $('body').on('click touchstart', function(e){
+    //   $('.js-search').removeClass('is-visible');
+    //   e.preventDefault();
     // });
 
 
-    // Smooth Scroll to Article Top (without ugly hashes, and with nice top offsets) ----------
-    // $(".hero .arrow-down").click(function(e) {
-    //     e.preventDefault();
-    //     $('html, body').animate({scrollTop: $('#top').offset().top -40 }, 500, 'swing');
-    // });
+    // underline under the active nav item
+    $(".nav .nav-link").click(function() {
+    $(".nav .nav-link").each(function() {
+      $(this).removeClass("active-nav-item");
+    });
+    $(this).addClass("active-nav-item");
+    $(".nav .more").removeClass("active-nav-item");
+    });
+
 
 
     // Smooth Scroll for Basic Anchors Links ----------
@@ -45,6 +72,26 @@ $(document).ready(function($) {
           // history.replaceState({}, '', '/');
       });
     });
+
+    // Horizontal Tabs
+     $('.accordion-tabs-minimal').each(function(index) {
+        $(this).children('li').first().children('a').addClass('is-active').next().addClass('is-open').show();
+      });
+
+      $('.accordion-tabs-minimal').on('click', 'li > a', function(event) {
+        if (!$(this).hasClass('is-active')) {
+          event.preventDefault();
+          var accordionTabs = $(this).closest('.accordion-tabs-minimal')
+          accordionTabs.find('.is-open').removeClass('is-open').hide();
+
+          $(this).next().toggleClass('is-open').toggle();
+          accordionTabs.find('.is-active').removeClass('is-active');
+          $(this).addClass('is-active');
+        } else {
+          event.preventDefault();
+        }
+    });
+
 
 
     // // Toggle View All ----------

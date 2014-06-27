@@ -1,7 +1,25 @@
 %button {
-  @include button(simple, $base-accent-color);
-  -webkit-font-smoothing: antialiased;
-  font-size: $base-font-size;
-  font-weight: bold;
-  line-height: 1em;
+  // @include button(simple, $base-accent-color);
+    border: 1px solid #094566;
+    border-radius: 3px;
+    color: #FFF;
+    display: inline-block;
+    font-size: inherit;
+    background-color: #176F9F;
+    padding: 7px 18px;
+    text-decoration: none;
+    background-clip: padding-box;
+    -webkit-font-smoothing: antialiased;
+    font-size: 1em;
+    -webkit-font-smoothing: antialiased;
+    font-size: $base-font-size;
+    font-weight: bold;
+    line-height: 1em;
+}
+
+
+@include media($phone-down) {
+    %button {
+        padding: 7px 2px;
+    }
 }

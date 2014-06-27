@@ -1,0 +1,177 @@
+!!! 5
+-# paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+%html.no-js{:lang => "en"}
+
+    %head
+
+        %meta{:charset => "utf-8", :"http-equiv"=>"Content-Type", :content=>"text/html"}
+
+        %title Project Name
+        %meta{:name => "description", :content => ""}
+        %meta{:name => "keywords", :content => ""}
+        %meta{:name => "author", :content => ""}
+
+        -# Mobile
+        %meta{:name => "viewport", :content => "width=device-width, initial-scale=1"}
+
+        -# Favicon
+        / %link{:href => "../img/icons/favicon.ico", :rel => "shortcut icon"}
+
+        -# FONTS
+        %script{:src => "//use.typekit.net/xrq4srv.js"}
+        %script
+            try{Typekit.load();}catch(e){}
+
+        -# CSS
+        %link{:rel => "stylesheet", :href => "../css/app.css"}
+
+        -# Modernizr
+        %script{:src => "../js/min/modernizr.min.js"}
+
+        -# IE LT 9
+        <!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="../css/ie8.css" /><script src='../js/libs/ie.min.js'></script><![endif]-->
+
+
+    %body.init
+
+
+        -# Content Wrap
+        %main#content-wrap{:role => "main"}
+            .outer-bounds
+                .content-row
+
+                    .main-content
+
+                        #jump-to-nav.show-on-tablet
+                            %a.btn.btn-neutral.full-bleed{:href => "#subnav"} Browse this Section
+
+                        %header.content-header
+                            %h2 When the Lord Himself Descends
+                            %p.lead from the series 1 & 2 Thessalonians
+
+                        #audio.content-row
+                            %br/
+                            %br/
+                            %audio.progression-single.progression-skin.progression-audio-player{:controls => "controls", :preload => "none"}
+                                %source{:src => '../audio/06 Slow It Down.mp3', :type => 'audio/mp3'}
+                                %source{:src => '../audio/06 Slow It Down.ogg', :type => 'audio/ogg'}
+                                // Flash Fallback
+                                %object{:data => "flashmediaelement.swf", :type => "application/x-shockwave-flash"}
+                                    %param{:name => "movie", :value => "../js/min/flashmediaelement.swf"}/
+                                    %param{:name => "flashvars", :value => "controls=true&file=../audio/your-filename.mp3"}/
+
+                            %a.btn.right.media-btn.download{:href => "#"} Download MP3
+
+                        %br/
+                        %br/
+
+
+                        %article.content-article
+                            %ul.accordion-tabs-minimal
+                                %li.tab-header-and-content
+                                    %a.tab-link{:href => "#"} Detail
+                                    .tab-content
+                                        %h4 When Have We Loved One Another Enough?
+                                        %h6 1 Thessalonians 4:9-12
+                                        %h6 Mark Davis
+                                        %p.date May 18, 2014
+                                %li.tab-header-and-content
+                                    %a.tab-link{:href => "#"} Scripture
+                                    .tab-content
+                                        %h4 1 Thessalonians 4:13-18
+                                        %h5 The Coming of the Lord
+
+                                        %p
+                                            %span.verse-num
+                                                14
+                                            For this reason I bow my knees before the Father,
+                                            %span.verse-num
+                                                15
+                                            from whom every familyOr fatherhood; the Greek word patria is closely related to the word for Father in heaven and on earth is named,
+                                            %span.verse-num
+                                                16
+                                            that according to the riches of his glory he may grant you to be strengthened with power through his Spirit in your inner being…
+
+                                        %cite
+                                            The Holy Bible, English Standard Version copyright (c)2001 by Crossway Bibles, a division of Good News Publishers. Used by permission. All rights reserved. http://www.esv.org
+
+
+
+
+
+                    %nav.sub#subnav
+                        %ul.border-b
+                            %li.title
+                                %h6
+                                    Who We Are
+                            %li
+                                %a{:href => "/assets/html/index.html"} Our Theological Identity
+                            %li
+                                %a{:href => "/assets/html/article-video.html"} Our History
+                            %li
+                                %a{:href => "#"} Stories of Rescue
+
+                            %li.title
+                                %h6
+                                    Our Campus
+                            %li.active
+                                %a{:href => "/assets/html/article-map"} New to PCPC
+                            %li
+                                %a{:href => "/assets/html/article-list"} Our Session and Diaconate
+                            %li
+                                %a{:href => "#"} Item
+                            %li
+                                %a{:href => "#"} Item
+                            %li.title
+                                %h6
+                                    Title
+                            %li
+                                %a{:href => "#"} Item
+                            %li
+                                %a{:href => "#"} Item
+                            %li
+                                %a{:href => "#"} Item
+                            %li
+                                %a{:href => "#"} Item
+
+
+
+                %footer.sub
+                    .breadcrumb
+                        %a{:href => "#"} About
+                        %a{:href => "#"} New to PCPC
+
+
+
+
+    -# Scripts
+    %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"}
+    // window.jQuery || document.write('<script src="../js/min/jquery.min.js"><\/script>')
+
+    %script{:src => "../js/min/app.min.js"}
+    %script{:src => "../js/min/sitescripts.min.js"}
+    %script{:src => "../js/min/mediaelement-and-player.min.js"}
+
+    %script
+        $('.progression-single').mediaelementplayer({
+        audioWidth: 400, // width of audio player
+        audioHeight:40, // height of audio player
+        startVolume: 0.5, // initial volume when the player starts
+        features: ['playpause','current','progress','duration','tracks','volume','fullscreen']
+        });
+
+    -# Google Analytics
+        %script
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+
+
+
+
+

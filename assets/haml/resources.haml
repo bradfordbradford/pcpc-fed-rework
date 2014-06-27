@@ -44,42 +44,12 @@
         %main#content-wrap{:role => "main"}
             .outer-bounds
                 .content-row
-                    %nav.sub
-                        %ul.border-b
-                            %li.title
-                                %h6
-                                    Who We Are
-                            %li
-                                %a{:href => "/assets/html/index.html"} Our Theological Identity
-                            %li
-                                %a{:href => "/assets/html/article-video.html"} Our History
-                            %li
-                                %a{:href => "#"} Stories of Rescue
-
-                            %li.title
-                                %h6
-                                    Our Campus
-                            %li
-                                %a{:href => "/assets/html/article-map"} New to PCPC
-                            %li
-                                %a{:href => "/assets/html/article-list"} Our Session and Diaconate
-                            %li
-                                %a{:href => "#"} Item
-                            %li
-                                %a{:href => "#"} Item
-                            %li.title
-                                %h6
-                                    Title
-                            %li
-                                %a{:href => "#"} Item
-                            %li
-                                %a{:href => "#"} Item
-                            %li
-                                %a{:href => "#"} Item
-                            %li
-                                %a{:href => "#"} Item
 
                     .main-content
+
+                        #jump-to-nav.show-on-tablet
+                            %a.btn.btn-neutral.full-bleed{:href => "#subnav"} Browse this Section
+
                         %header.content-header
                             %h2 Sermon Audio Archive
                             %h6 A list of sermons preached from the PCPC pulpit.
@@ -145,6 +115,41 @@
                                             %p.date May 18, 2014
 
 
+
+                    %nav.sub#subnav
+                        %ul.border-b
+                            %li.title
+                                %h6
+                                    Who We Are
+                            %li
+                                %a{:href => "/assets/html/index.html"} Our Theological Identity
+                            %li
+                                %a{:href => "/assets/html/article-video.html"} Our History
+                            %li
+                                %a{:href => "#"} Stories of Rescue
+
+                            %li.title
+                                %h6
+                                    Our Campus
+                            %li
+                                %a{:href => "/assets/html/article-map"} New to PCPC
+                            %li
+                                %a{:href => "/assets/html/article-list"} Our Session and Diaconate
+                            %li
+                                %a{:href => "#"} Item
+                            %li
+                                %a{:href => "#"} Item
+                            %li.title
+                                %h6
+                                    Title
+                            %li
+                                %a{:href => "#"} Item
+                            %li
+                                %a{:href => "#"} Item
+                            %li
+                                %a{:href => "#"} Item
+                            %li
+                                %a{:href => "#"} Item
 
 
                 %footer.sub

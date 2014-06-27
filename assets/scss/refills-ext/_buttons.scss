@@ -1,13 +1,17 @@
+//  Buttons
+///////////////////////////////////////////////////////////////////////////////
+
 a.btn {
     $btn-height: $base-line-height * 1.5;
 
     line-height: $btn-height;
-    padding: 0 $btn-height/2;
+    padding: $btn-height/2.75 $btn-height/2;
+    line-height: $base-line-height * .75;
     border-radius: $base-border-radius;
     @include transition (all 0.2s ease-in-out);
     @include prefixer(box-sizing, border-box, webkit moz spec);
     @include user-select(none);
-    font-size: 1em;
+    font-size: $base-font-size * .875;
     text-decoration: none;
     display: inline-block;
     vertical-align: bottom;
@@ -45,6 +49,70 @@ a.btn {
         }
     }
 
+    // Neutral
+    &.btn-neutral {
+        background: transparentize($light-gray, .6);
+        color: lighten($medium-gray, 2);
+        border: 1px solid $light-gray;
+        &:hover {
+            background: transparentize($light-gray, .4);
+        }
+    }
 
+    // Small
+    &.btn-large {
+        font-size: $base-font-size;
+    }
+
+    // Media
+    $media-btn-border-color: $base-border-color;
+    $media-btn-border: 1px solid $media-btn-border-color;
+    $media-btn-background: lighten($media-btn-border-color, 10);
+    $media-btn-secondary-background: $media-btn-background;
+    $media-btn-hover-background: lighten($media-btn-background, 5);
+
+    &.media-btn {
+        width: auto;
+        font-size: 14px;
+        padding: 6px 18px;
+        text-transform: capitalize;
+        font-weight: 400;
+        color: $base-font-color;
+        background-color: $media-btn-background;
+        border: $media-btn-border ;
+        cursor: pointer;
+        display: inline-block;
+        font-family: inherit;
+        line-height: 1;
+        outline: none;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        -webkit-appearance: none;
+        @include linear-gradient($media-btn-secondary-background, $media-btn-background);
+        box-shadow: 0 2px 4px darken($base-body-color, 10);
+        border-radius: $secondary-border-radius;
+        @include transition(background-color 0.15s ease-in-out);
+
+        &:hover {
+            @include linear-gradient(lighten($media-btn-secondary-background, 2), lighten($media-btn-background, 2));
+        }
+    }
+
+    &.download:before {
+        content: "a";
+        padding: 0 5px 0 0;
+        position: relative;
+        top: 2px;
+        font-family: "all-purpose" !important;
+        font-style: normal !important;
+        font-weight: normal !important;
+        font-variant: normal !important;
+        text-transform: none !important;
+        speak: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
 
 }
