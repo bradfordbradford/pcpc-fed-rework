@@ -37,6 +37,12 @@
               <br>
               <audio class='progression-single progression-skin progression-audio-player' controls='controls' preload='none'>
                 <source src='../audio/06 Slow It Down.mp3' type='audio/mp3'></source>
+                <source src='../audio/06 Slow It Down.ogg' type='audio/ogg'></source>
+                <!-- / Flash Fallback -->
+                <object data='flashmediaelement.swf' type='application/x-shockwave-flash'>
+                  <param name='movie' value='../js/min/flashmediaelement.swf'>
+                  <param name='flashvars' value='controls=true&amp;file=../audio/your-filename.mp3'>
+                </object>
               </audio>
               <a class='btn right media-btn download' href='#'>Download MP3</a>
             </div>

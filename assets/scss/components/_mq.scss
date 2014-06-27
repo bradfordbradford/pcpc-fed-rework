@@ -29,6 +29,24 @@
         display: inherit !important;
     }
 
+    // Utility Grid
+
+    .col-one,
+    .col-two,
+    .col-three,
+    .col-four,
+    .col-five,
+    .col-six,
+    .col-seven,
+    .col-eight,
+    .col-nine,
+    .col-ten,
+    .col-eleven,
+    .col-twelve {
+        @include fullBleed;
+        margin: $base-line-height auto;
+    }
+
 }
 
 

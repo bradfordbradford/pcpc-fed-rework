@@ -58,6 +58,11 @@
                             %br/
                             %audio.progression-single.progression-skin.progression-audio-player{:controls => "controls", :preload => "none"}
                                 %source{:src => '../audio/06 Slow It Down.mp3', :type => 'audio/mp3'}
+                                %source{:src => '../audio/06 Slow It Down.ogg', :type => 'audio/ogg'}
+                                // Flash Fallback
+                                %object{:data => "flashmediaelement.swf", :type => "application/x-shockwave-flash"}
+                                    %param{:name => "movie", :value => "../js/min/flashmediaelement.swf"}/
+                                    %param{:name => "flashvars", :value => "controls=true&file=../audio/your-filename.mp3"}/
 
                             %a.btn.right.media-btn.download{:href => "#"} Download MP3
 
