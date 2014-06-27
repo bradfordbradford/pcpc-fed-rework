@@ -5,7 +5,8 @@ a.btn {
     $btn-height: $base-line-height * 1.5;
 
     line-height: $btn-height;
-    padding: 0 $btn-height/2;
+    padding: $btn-height/2.75 $btn-height/2;
+    line-height: $base-line-height * .75;
     border-radius: $base-border-radius;
     @include transition (all 0.2s ease-in-out);
     @include prefixer(box-sizing, border-box, webkit moz spec);

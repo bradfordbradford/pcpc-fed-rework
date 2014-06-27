@@ -17,6 +17,8 @@ html, body {
 
 #content-wrap {
     margin-top: $navbarHeight;
+    position: relative;
+    z-index: 1000;
 }
 
 nav.sub {

@@ -1,0 +1,228 @@
+!!! 5
+-# paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+%html.no-js{:lang => "en"}
+
+    %head
+
+        %meta{:charset => "utf-8", :"http-equiv"=>"Content-Type", :content=>"text/html"}
+
+        %title Project Name
+        %meta{:name => "description", :content => ""}
+        %meta{:name => "keywords", :content => ""}
+        %meta{:name => "author", :content => ""}
+
+        -# Mobile
+        %meta{:name => "viewport", :content => "width=device-width, initial-scale=1"}
+
+        -# Favicon
+        / %link{:href => "../img/icons/favicon.ico", :rel => "shortcut icon"}
+
+        -# FONTS
+        %script{:src => "//use.typekit.net/xrq4srv.js"}
+        %script
+            try{Typekit.load();}catch(e){}
+
+        -# CSS
+        %link{:rel => "stylesheet", :href => "../css/app.css"}
+
+        -# Modernizr
+        %script{:src => "../js/min/modernizr.min.js"}
+
+        -# IE LT 9
+        <!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="../css/ie8.css" /><script src='../js/libs/ie.min.js'></script><![endif]-->
+
+
+
+    %body.init
+        -# Content Wrap
+        %main#content-wrap{:role => "main"}
+            .outer-bounds
+                .content-row
+
+
+                    #homeSlider.royalSlider.rsDefaultInv
+                        .rsContent
+                            %a.rsImg{:href => "http://placehold.it/1450x540"}
+                            %span.rsTmb
+                                %img{:src => "http://placehold.it/540x350", :alt => ""}/
+                            .slideContentWrap.rsABlock
+                                %h2
+                                    Welcome to Park Cities
+                                    %br/
+                                    Presbyterian Church
+                                %hr/
+                                %a.btn.btn-secondary{:href => "#"} New Here?
+                                %a.btn.btn-secondary{:href => "#"} Directions &amp; Parking
+
+                        .rsContent
+                            %a.rsImg{:href => "http://placehold.it/1450x540"}
+                            %span.rsTmb
+                                %img{:src => "http://placehold.it/540x350", :alt => ""}/
+                            .rsABlock.rsFirstSlideTitle.rsSlideTitle
+                                %h2 Headers with Transitions
+                            .rsABlock.rsSecondSlideTitle.rsSlideTitle{:'data-delay'=>'350'}
+                                %h5
+                                    These are optional headers—a great way to add
+                                    %br/
+                                    a bit of complexity to simple images
+
+                        .rsContent
+                            %a.rsImg{:href => "http://placehold.it/1450x540"}
+                            %span.rsTmb
+                                %img{:src => "http://placehold.it/540x350", :alt => ""}/
+                            .rsABlock.rsFirstSlideTitle.rsSlideTitle
+                                %h2 Another, single Header with Transition
+                        .rsContent
+                            %a.rsImg{:href => "http://placehold.it/1450x540"}
+                            %span.rsTmb
+                                %img{:src => "http://placehold.it/540x350", :alt => ""}/
+
+
+
+
+
+
+
+        -# Site Footer
+        %footer.footer#main-footer{:role=>'contentinfo'}
+            .outer-bounds
+                .footer-links
+                    %ul.border-b
+                        %li
+                            %h3 Quick Links
+                        %li
+                            %a{:href => "#"} Home
+                        %li
+                            %a{:href => "#"} About
+                        %li
+                            %a{:href => "#"} Worship
+                        %li
+                            %a{:href => "#"} Grow
+                        %li
+                            %a{:href => "#"} Serve
+                        %li
+                            %a{:href => "#"} Missions
+                        %li
+                            %a{:href => "#"} Care
+                        %li
+                            %a{:href => "#"} Resources
+                        %li
+                            %a{:href => "#"} News/Events
+                        %li
+                            %a{:href => "#"} Give
+
+
+                    %ul
+                        %li
+                            %h3 Location & Contact
+                        %li
+                            %small
+                                %span.address 4124 Oak Lawn Avenue
+                                %br/
+                                %span.city Dallas, TX 75219
+                                %br/
+                                %a{:href => "#"} Get Directions
+                                %br/
+                                %span.phone P: (214) 224-2500
+                                %br/
+                                %span.fax F: (214) 224-2782
+                        %li
+                            %h3 Office Hours
+                        %li
+                            %small
+                                %span.hours
+                                    8:30 am to 5:00 pm
+                                    %br/
+                                    Monday through Friday
+
+
+                    %ul
+                        %li
+                            %h3 Sunday Service Times
+                        %li
+                            %small
+                                %span.hours
+                                    8:00 am - Communion Service
+                                    %br/
+                                    9:30 am / 11:00 am
+                                    %br/
+                                %a{:href => "#"} Live Video Stream of the services.
+
+
+                        %li
+                            %h3 Elsewhere
+                        %li
+                            %a.ico.facebook{:href => "#", :'data-icon'=>'x'}
+                            %a.ico.twitter{:href => "#", :'data-icon'=>'v'}
+                            %a.ico.vimeo{:href => "#", :'data-icon'=>'u'}
+                            %a.ico.google-plus{:href => "#", :'data-icon'=>'w'}
+
+                            %br/
+                            %small
+                                %strong More:
+                            %a{:href => "#"} Upstream,
+                            %a{:href => "#"} Issuu,
+                            %a{:href => "#"} PCPC App
+
+                    %ul
+                        %li
+                            %h3 24/7 Prayer
+                        %li
+                            %small
+                                How can our pastors pray for you?
+                                %br/
+                                %span.email.strong
+                                    E: 24/7prayer@pcpc.org
+                                %br/
+                                %span.phone P: 214-224-2680
+
+                        %li
+                            %h3 Recently
+                        %li
+                            %a{:href => "#"} The Word of God in Stained Glass
+                        %li
+                            %a{:href => "#"} Trouble Now – Glory Then
+                        %li
+                            %a{:href => "#"} Seven devotionals for times of suffering
+
+
+                %hr.fullbleed/
+                .footnotes
+                    %h3 Park Cities Presbyterian Church &copy; 2014
+                    %small
+                        A congregation of
+                        %a{:href => "#"} Presbyterian Church in America
+                    %br/
+                    %small
+                        %a{:href => "#"} Staff Access
+
+
+
+
+
+
+
+
+    -# Scripts
+    %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"}
+    // window.jQuery || document.write('<script src="../js/min/jquery.min.js"><\/script>')
+
+    %script{:src => "../js/min/app.min.js"}
+    %script{:src => "../js/min/sitescripts.min.js"}
+    %script{:src => "../js/min/homescripts.min.js"}
+
+    -# Google Analytics
+        %script
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+
+
+
+
+

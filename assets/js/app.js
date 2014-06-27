@@ -33,13 +33,20 @@ $(document).ready(function($) {
     // Search
     $('.js-search-trigger').on('click touchstart', function(e){
       $('.js-search').toggleClass('is-visible');
+      $('#js-search-overlay').addClass('is-visible');
+      e.preventDefault();
+
+    });
+    $('#js-search-overlay').on('click touchstart', function(e){
+      $('.js-search').removeClass('is-visible');
+      $(this).removeClass('is-visible');
       e.preventDefault();
     });
 
-    $('#content-wrap').on('click touchstart', function(e){
-      $('.js-search').removeClass('is-visible');
-      e.preventDefault();
-    });
+    // $('body').on('click touchstart', function(e){
+    //   $('.js-search').removeClass('is-visible');
+    //   e.preventDefault();
+    // });
 
 
     // underline under the active nav item
