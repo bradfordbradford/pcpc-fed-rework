@@ -7,7 +7,7 @@
   $tab-inactive-hover-color: darken($light-gray, 5);
   $tab-mode: $ipad-portrait;
   $tab-active-background-mobile: $true-white;
-  $tab-inactive-color-mobile: darken($true-white, 2%);
+  $tab-inactive-color-mobile: darken($true-white, 3%);
   $tab-is-open-background-mobile: $true-white;
 
   @include clearfix;
@@ -62,7 +62,7 @@
     }
 
     &:hover {
-      color: $base-link-color;
+      color: $dark-gray;
     }
 
     &:focus {
