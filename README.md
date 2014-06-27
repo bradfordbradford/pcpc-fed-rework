@@ -44,5 +44,5 @@ What's included?
 Track Progress
 -------------
 
-Follow along with the latest via the [Burnlist](http://bradfordbradford.github.io/pcpc-fed-rework/burnlist.md)
+Follow along with the latest via the [Burnlist](http://bradfordbradford.github.io/pcpc-fed-rework/burnlist.html)
 
