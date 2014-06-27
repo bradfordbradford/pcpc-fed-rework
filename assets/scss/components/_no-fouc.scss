@@ -7,8 +7,10 @@ html.js body.init {
     #main-site-navigation-wrap {
         opacity: 0;
     }
-    .main-content {
+    #content-wrap {
         opacity: 0;
+    }
+    .main-content {
         @include transform(translate(0, 6px));
     }
 }
