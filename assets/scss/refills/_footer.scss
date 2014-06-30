@@ -26,22 +26,22 @@
 
   ul {
     margin-bottom: $base-line-height*2;
+    @include span-columns(3);
+    @include clearfix;
 
-    @include media($ipad-portrait) {
-      @include span-columns(3);
-      @include clearfix;
+    @include media($ipad-landscape-down) {
+      @include fullBleed();
     }
   }
 
   li {
-    text-align: center;
-
     @include media($ipad-portrait) {
       text-align: left;
     }
   }
 
-  li a {
+  ul li a {
+    color: $footer-color;
     color: $footer-link-color;
 
     &:hover {
@@ -65,6 +65,7 @@
   }
 
   p, p a, a {
+    color: $footer-color;
     color:$footer-disclaimer-color;
     font-size: .9em;
     line-height: 1.5em;
@@ -81,6 +82,7 @@
   .footnotes {
     text-align: center;
     h3 {
+      color: $footer-color;
       color:$footer-disclaimer-color;
       font-family: $serif;
       text-transform: none;
@@ -90,6 +92,7 @@
   // Lists with Bottom Border
   ul.border-b {
     li {
+      border-color: white;
       border-color: transparentize($footer-disclaimer-color, .6);
     }
   }

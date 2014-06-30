@@ -4,17 +4,15 @@
 
 // Print Styles
 
-@media print {
-
+// @media print {
       .show-for-print {display: inherit !important;}
-
       body {padding: 32px;font-size:12px;}
-
       * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
-      article a {text-decoration: underline;}
+      a, a:visited, .footer p, .footer p a, .footer a, .footer ul li a { text-decoration: underline; color: black !important;}
+      a[href]:after { content: " (" attr(href) ")"; }
       abbr[title]:after { content: " (" attr(title) ")"; }
       .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
-      pre, blockquote { page-break-inside: avoid; }
+      pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
       thead { display: table-header-group; } /* h5bp.com/t */
       tr, img { page-break-inside: avoid; }
       img { max-width: 100% !important; }
@@ -22,4 +20,33 @@
       p, h2, h3 { orphans: 3; widows: 3; }
       h2, h3 { page-break-after: avoid; }
 
-}
+      // Hide for Print
+      .accessible-megamenu,
+      nav.sub,
+      footer.sub,
+      .footer ul.border-b,
+      #homeSlider,
+      .mejs-container,
+      .fluidvids,
+      a.btn.media-btn,
+      a.btn {
+            display: none !important;
+      }
+
+      // Show for Print
+      .accordion-tabs-minimal li.tab-header-and-content,
+      .accordion-tabs-minimal li.tab-header-and-content .tab-content {
+            display: block !important;
+      }
+
+      // Print Friendly Logo
+      header#site-header .logo a {
+            background: url('../img/logos/logo_print.jpg') no-repeat !important;
+      }
+
+      // Adjust Grid for Print
+      .main-content {
+            @include fullBleed;
+      }
+
+// }
