@@ -61,6 +61,9 @@ What's included?
 
 _Preview this font: assets/fonts/icons-reference.html
 
+### HTACCESS
+- example.htaccess - Sets up MIME-types for Linux/Apache servers [Reference: MediaElement.js](http://mediaelementjs.com/#installation)
+
 ### Browser Compatibility
 
 Built to run beautifully in modern browsers while withstanding the terrors of IE8. Best results in IE8 rely on **ie.min.js** which includes the following:
