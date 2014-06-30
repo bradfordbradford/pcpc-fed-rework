@@ -4,7 +4,7 @@
 
 // Print Styles
 
-// @media print {
+@media print {
       .show-for-print {display: inherit !important;}
       body {padding: 32px;font-size:12px;}
       * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
@@ -49,4 +49,4 @@
             @include fullBleed;
       }
 
-// }
+}
