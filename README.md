@@ -106,5 +106,5 @@ Built to run beautifully in modern browsers while withstanding the terrors of IE
 Track Progress
 -------------
 
-Follow along with the latest via the [Burnlist](http://bradfordbradford.github.io/pcpc-fed-rework/burnlist.html)
+Follow along with the latest via the [Burnlist](https://github.com/bradfordbradford/pcpc-fed-rework/blob/master/burnlist.md)
 
