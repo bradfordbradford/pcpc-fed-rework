@@ -57,9 +57,14 @@ What's included?
 - homescripts.js - scripts for home page slider
 
 ### Fonts
+
 - all-purpose - a handy font kit with commonly used icons.
 
 _Preview this font: assets/fonts/icons-reference.html
+
+### HTACCESS
+
+- example.htaccess - Sets up MIME-types for Linux/Apache servers [Reference: MediaElement.js](http://mediaelementjs.com/#installation)
 
 ### Browser Compatibility
 
