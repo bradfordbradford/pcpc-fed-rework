@@ -1,14 +1,13 @@
-
 #burnlist.md
 
 ## Do
-- audio page: check ie8 for audio fallback
-- General: Debug
-- General: Revisions
+- General: Any Revisions? [06/30/14]
 
 
 ## Done
 _Features_
+- -audio page: check ie8 for audio fallback-
+- -General: Debug-
 - -livestream fullbleed: mobile [x]-
 - -audio page: mobile [x]-
 - -fullbleed-list: mobile [x]-

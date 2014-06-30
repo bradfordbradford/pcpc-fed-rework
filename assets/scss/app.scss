@@ -9,6 +9,7 @@
     // BOURBON
     'bourbon/bourbon'
     ,'neat/neat'
+    ,'set-mixins'
 
     // RESET, FOUC
     ,'normalize'
@@ -20,15 +21,11 @@
 
 
     // COMPONENTS
-    ,'set-mixins'
     ,'refills-ext/refills-ext'
     ,'components/import-blocks'
 
-
     // MQ, PRINT
     ,'components/mq'
-    // ,'components/print'
-
-
+    ,'components/print'
     ;
 

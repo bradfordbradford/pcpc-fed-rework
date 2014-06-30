@@ -1,4 +1,16 @@
+@import
+    // BOURBON
+    'bourbon/bourbon'
+    ,'neat/neat'
+;
 
 
 // IE8
-// .lt-ie9 {}
+.lt-ie9 {
+    .js-search-wrap .search-and-submit {
+        right: -20px;
+    }
+    .content-header .btn {
+        float: right;
+    }
+}

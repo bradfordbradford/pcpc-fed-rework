@@ -5,6 +5,7 @@
 $(document).ready(function($) {
 
     // Prevent FOUC while JS loads, then swap for Run ----------
+    $('html').removeClass('no-js').addClass('js');
     setTimeout(function () {
         $('body').removeClass('init').addClass('run');
     }, 500);

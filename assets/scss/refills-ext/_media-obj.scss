@@ -4,7 +4,6 @@
   $media-detail-color: transparentize($media-color, .5);
   $media-image-vert-alignment: top;
 
-  @include row($direction: RTL);
   display: table;
   width: 100%;
   margin-bottom: $base-line-height;
@@ -19,6 +18,9 @@
 
   .media-image {
     @include span-columns(5);
+    margin-right: 0;
+    float:right;
+
     > img {
       height: auto;
       display: block;
@@ -33,6 +35,7 @@
 
   .media-content {
     @include span-columns(7);
+    float:left;
 
     h1 {
       font-size: 1em;
