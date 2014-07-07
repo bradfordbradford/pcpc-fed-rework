@@ -114,20 +114,59 @@
     }
     .title {
       font-size: 1em;
-      a {
+      a, span {
+        font-style: normal;
+        font-family: $sans-serif;
         font-size: 0.875em;
         letter-spacing: 0.04em;
-        color: darken($dark-blue, 16) !important;
+        color: darken($dark-blue, 20) !important;
         text-transform: uppercase;
         &:hover {
-          color: darken($dark-blue, 20) !important;
+          color: darken($dark-blue, 16) !important;
+        }
+      }
+    }
+
+    // Latest Sermon Audio
+    &.latest-sermon-wrap {
+      margin-bottom: $base-line-height;
+      header {
+        margin-bottom: $base-line-height;
+        h4 {
+          display: block;
+          margin-bottom: $base-line-height/3;
+        }
+        h3 {
+          color: #B6DEF3;
+          font-family: $serif;
+          font-weight: 200;
+
+        }
+      }
+
+      h4, .meta, p {
+        color: $true-white;
+        font-family: $serif;
+      }
+
+      .media-image {
+        img {
+          border-radius: 180px;
+          padding: .12.5em;
+        }
+      }
+
+      .buttons-wrap {
+        margin: $base-line-height 0 0;
+        .media-btn {
+          border-color: $dark-gray;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
         }
       }
     }
 
 
     // Sub Lists
-
     ol {
         margin: 4px 0 24px;
 

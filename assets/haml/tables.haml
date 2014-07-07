@@ -1,156 +1,153 @@
 !!! 5
 -# paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-%html.no-js{:lang => "en"}
+/[if lt IE 7] <html lang="en" class="no-js ie6">
+/[if IE 7 ]   <html lang="en" class="no-js ie7">
+/[if IE 8 ]   <html lang="en" class="no-js ie8">
+/[if IE 9 ]   <html lang="en" class="no-js ie9">
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 
-    %head
+%head
 
-        %meta{:charset => "utf-8", :"http-equiv"=>"Content-Type", :content=>"text/html"}
+    %meta{:charset => "utf-8", :"http-equiv"=>"Content-Type", :content=>"text/html"}
 
-        %title Project Name
-        %meta{:name => "description", :content => ""}
-        %meta{:name => "keywords", :content => ""}
-        %meta{:name => "author", :content => ""}
+    %title Project Name
+    %meta{:name => "description", :content => ""}
+    %meta{:name => "keywords", :content => ""}
+    %meta{:name => "author", :content => ""}
 
-        -# Mobile
-        %meta{:name => "viewport", :content => "width=device-width, initial-scale=1"}
+    -# Mobile
+    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1"}
 
-        -# Favicon
-        / %link{:href => "../img/icons/favicon.ico", :rel => "shortcut icon"}
+    -# Favicon
+    %link{:href => "../img/icons/favicon_32x32.png", :rel => "shortcut icon"}
 
-        -# FONTS
-        %script{:src => "//use.typekit.net/xrq4srv.js"}
-        %script
-            try{Typekit.load();}catch(e){}
+    -# FONTS
+    %script{:src => "//use.typekit.net/xrq4srv.js"}
+    %script
+        try{Typekit.load();}catch(e){}
 
-        -# CSS
-        %link{:rel => "stylesheet", :href => "../css/app.css"}
+    -# CSS
+    %link{:rel => "stylesheet", :href => "../css/app.css"}
 
-        -# Modernizr
-        %script{:src => "../js/libs/modernizr-ck.js"}
+    -# Modernizr
+    %script{:src => "../js/libs/modernizr-ck.js"}
 
-        -# IE LT 9
-        <!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="../css/ie8.css" /><script src='../js/min/ie.min.js'></script><![endif]-->
-
-
-
-    %body.init
-
-
-        -# Content Wrap
-        %main#content-wrap{:role => "main"}
-            .outer-bounds
-                .content-row
-
-                    .main-content
-
-                        #jump-to-nav.show-on-tablet
-                            %a.btn.btn-neutral.full-bleed{:href => "#subnav"} Browse this Section
-
-                        %header.content-header
-                            %h2 Tabular Content
-
-
-                        %article.content-article
-
-                            %p Welcome to Park Cities Presbyterian Church. We are delighted that you are interested in coming to worship with us. PCPC is a large, extended family of people seeking to be Christ’s disciples and to bear His truth into our world.
-                            %table.table-borders
-                                %thead
-                                    %tr
-                                        %th Header Cell 1/th
-                                        %th Header Cell 2/th
-                                        %th Header Cell 3/th
-                                %tbody
-                                    %tr
-                                        %td Row 1 Cell 1
-                                        %td Row 1 Cell 2
-                                        %td
-                                            %a.btn.primary{:href => "#"}
-                                                View File
-                                    %tr
-                                        %td Row 1 Cell 1
-                                        %td Row 1 Cell 2
-                                        %td
-                                            %a.btn.primary{:href => "#"}
-                                                View File
-                                    %tr
-                                        %td Row 1 Cell 1
-                                        %td Row 1 Cell 2
-                                        %td
-                                            %a.btn.primary{:href => "#"}
-                                                View File
-                                    %tr
-                                        %td Row 1 Cell 1
-                                        %td Row 1 Cell 2
-                                        %td
-                                            %a.btn.primary{:href => "#"}
-                                                View File
+    -# IE LT 9
+    <!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="../css/ie8.css" /><script src='../js/min/ie.min.js'></script><![endif]-->
 
 
 
-                    %nav.sub#subnav
-                        %ul.border-b
-                            %li.title
-                                %h6
-                                    Who We Are
-                            %li
-                                %a{:href => "/assets/html/index.html"} Our Theological Identity
-                            %li
-                                %a{:href => "/assets/html/article-video.html"} Our History
-                            %li
-                                %a{:href => "#"} Stories of Rescue
-
-                            %li.title
-                                %h6
-                                    Our Campus
-                            %li.active
-                                %a{:href => "/assets/html/article-map"} New to PCPC
-                            %li
-                                %a{:href => "/assets/html/article-list"} Our Session and Diaconate
-                            %li
-                                %a{:href => "#"} Item
-                            %li
-                                %a{:href => "#"} Item
-                            %li.title
-                                %h6
-                                    Title
-                            %li
-                                %a{:href => "#"} Item
-                            %li
-                                %a{:href => "#"} Item
-                            %li
-                                %a{:href => "#"} Item
-                            %li
-                                %a{:href => "#"} Item
+%body.init
 
 
+    -# Content Wrap
+    %main#content-wrap{:role => "main"}
+        .outer-bounds
+            .content-row
 
-                %footer.sub
-                    .breadcrumb
-                        %a{:href => "#"} About
-                        %a{:href => "#"} New to PCPC
+                .main-content
+
+                    #jump-to-nav.show-on-tablet
+                        %a.btn.btn-neutral.full-bleed{:href => "#subnav"} Browse this Section
+
+                    %header.content-header
+                        %h2 Tabular Content
+
+
+                    %article.content-article
+
+                        %p Welcome to Park Cities Presbyterian Church. We are delighted that you are interested in coming to worship with us. PCPC is a large, extended family of people seeking to be Christ’s disciples and to bear His truth into our world.
+                        %table.table-borders
+                            %thead
+                                %tr
+                                    %th Header Cell 1/th
+                                    %th Header Cell 2/th
+                                    %th Header Cell 3/th
+                            %tbody
+                                %tr
+                                    %td Row 1 Cell 1
+                                    %td Row 1 Cell 2
+                                    %td
+                                        %a.btn.primary{:href => "#"}
+                                            View File
+                                %tr
+                                    %td Row 1 Cell 1
+                                    %td Row 1 Cell 2
+                                    %td
+                                        %a.btn.primary{:href => "#"}
+                                            View File
+                                %tr
+                                    %td Row 1 Cell 1
+                                    %td Row 1 Cell 2
+                                    %td
+                                        %a.btn.primary{:href => "#"}
+                                            View File
+                                %tr
+                                    %td Row 1 Cell 1
+                                    %td Row 1 Cell 2
+                                    %td
+                                        %a.btn.primary{:href => "#"}
+                                            View File
 
 
 
+                %nav.sub#subnav
+                    %ul.border-b
+                        %li.title
+                            %h6
+                                Who We Are
+                        %li
+                            %a{:href => "/assets/html/index.html"} Our Theological Identity
+                        %li
+                            %a{:href => "/assets/html/article-video.html"} Our History
+                        %li
+                            %a{:href => "#"} Stories of Rescue
 
-    -# Scripts
-    %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"}
-    // window.jQuery || document.write('<script src="../js/min/jquery.min.js"><\/script>')
+                        %li.title
+                            %h6
+                                Our Campus
+                        %li.active
+                            %a{:href => "/assets/html/article-map"} New to PCPC
+                        %li
+                            %a{:href => "/assets/html/article-list"} Our Session and Diaconate
+                        %li
+                            %a{:href => "#"} Item
+                        %li
+                            %a{:href => "#"} Item
+                        %li.title
+                            %h6
+                                Title
+                        %li
+                            %a{:href => "#"} Item
+                        %li
+                            %a{:href => "#"} Item
+                        %li
+                            %a{:href => "#"} Item
+                        %li
+                            %a{:href => "#"} Item
 
-    %script{:src => "../js/min/app.min.js"}
-    %script{:src => "../js/min/sitescripts.min.js"}
 
-    -# Google Analytics
-        %script
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
+
+            %footer.sub
+                .breadcrumb
+                    %a{:href => "#"} About
+                    %a{:href => "#"} New to PCPC
 
 
 
 
+-# Scripts
+%script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"}
+// window.jQuery || document.write('<script src="../js/min/jquery.min.js"><\/script>')
 
+%script{:src => "../js/min/app.min.js"}
+%script{:src => "../js/min/sitescripts.min.js"}
+
+-# Google Analytics
+    %script
+        var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)}(document,'script'));
+
+</html>

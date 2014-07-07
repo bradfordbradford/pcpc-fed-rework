@@ -1,158 +1,155 @@
 !!! 5
 -# paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-%html.no-js{:lang => "en"}
+/[if lt IE 7] <html lang="en" class="no-js ie6">
+/[if IE 7 ]   <html lang="en" class="no-js ie7">
+/[if IE 8 ]   <html lang="en" class="no-js ie8">
+/[if IE 9 ]   <html lang="en" class="no-js ie9">
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 
-    %head
+%head
 
-        %meta{:charset => "utf-8", :"http-equiv"=>"Content-Type", :content=>"text/html"}
+    %meta{:charset => "utf-8", :"http-equiv"=>"Content-Type", :content=>"text/html"}
 
-        %title Project Name
-        %meta{:name => "description", :content => ""}
-        %meta{:name => "keywords", :content => ""}
-        %meta{:name => "author", :content => ""}
+    %title Project Name
+    %meta{:name => "description", :content => ""}
+    %meta{:name => "keywords", :content => ""}
+    %meta{:name => "author", :content => ""}
 
-        -# Mobile
-        %meta{:name => "viewport", :content => "width=device-width, initial-scale=1"}
+    -# Mobile
+    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1"}
 
-        -# Favicon
-        / %link{:href => "../img/icons/favicon.ico", :rel => "shortcut icon"}
+    -# Favicon
+    %link{:href => "../img/icons/favicon_32x32.png", :rel => "shortcut icon"}
 
-        -# FONTS
-        %script{:src => "//use.typekit.net/xrq4srv.js"}
-        %script
-            try{Typekit.load();}catch(e){}
+    -# FONTS
+    %script{:src => "//use.typekit.net/xrq4srv.js"}
+    %script
+        try{Typekit.load();}catch(e){}
 
-        -# CSS
-        %link{:rel => "stylesheet", :href => "../css/app.css"}
+    -# CSS
+    %link{:rel => "stylesheet", :href => "../css/app.css"}
 
-        -# Modernizr
-        %script{:src => "../js/libs/modernizr-ck.js"}
+    -# Modernizr
+    %script{:src => "../js/libs/modernizr-ck.js"}
 
-        -# IE LT 9
-        <!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="../css/ie8.css" /><script src='../js/min/ie.min.js'></script><![endif]-->
-
-
-
-    %body.init
+    -# IE LT 9
+    <!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="../css/ie8.css" /><script src='../js/min/ie.min.js'></script><![endif]-->
 
 
-        -# Content Wrap
-        %main#content-wrap{:role => "main"}
-            .outer-bounds
 
-                .main-content.full-bleed
-                    %header.content-header
-                        .content-row
-                            %h2.left Featured Events
-                            %aside.options.right
-                                %a.btn{:href => "#"} Events by Month
-                        %hr/
+%body.init
 
-                    %article.content-article
 
-                        .media-obj
-                            .media-image
-                                %img{:src => "http://pcpc.org/image/2/450/0/5/0/uploads/images/events/banners/young-adult-summer-stories-ban-5374e8420d3ab.png", :alt => ""}/
-                            .media-content
-                                %h3 Visiting
-                                %p.date June 05, 2015
-                                %p
+    -# Content Wrap
+    %main#content-wrap{:role => "main"}
+        .outer-bounds
+
+            .main-content.full-bleed
+                %header.content-header
+                    .content-row
+                        %h2.left Featured Events
+                        %aside.options.right
+                            %a.btn{:href => "#"} Events by Month
+                    %hr/
+
+                %article.content-article
+
+                    .media-obj
+                        .media-image
+                            %img{:src => "http://pcpc.org/image/2/450/0/5/0/uploads/images/events/banners/young-adult-summer-stories-ban-5374e8420d3ab.png", :alt => ""}/
+                        .media-content
+                            %h3 Visiting
+                            %p.date June 05, 2015
+                            %p
+                                %span
+                                    Welcome to Park Cities Presbyterian Church.
+                                We’re recruiting “players” (age five by September 1, 2014, through rising fourth graders) for VBS’s Home Run Derby. Registration is open. We’re also looking for trainers (aka volunteers) for our game! VBS Training Camp (birth to age four) is provided for volunteers’ children.
+
+                                %a.read-more{:href => "#"}
+                                    More
                                     %span
-                                        Welcome to Park Cities Presbyterian Church.
-                                    We’re recruiting “players” (age five by September 1, 2014, through rising fourth graders) for VBS’s Home Run Derby. Registration is open. We’re also looking for trainers (aka volunteers) for our game! VBS Training Camp (birth to age four) is provided for volunteers’ children.
+                                        ›
+                    .media-obj
+                        .media-image
+                            %img{:src => "http://pcpc.org/image/2/450/0/5/0/uploads/images/events/banners/young-adult-summer-stories-ban-5374e8420d3ab.png", :alt => ""}/
+                        .media-content
+                            %h3 Visiting
+                            %p.date June 05, 2015
+                            %p
+                                %span
+                                    Welcome to Park Cities Presbyterian Church.
+                                We’re recruiting “players” (age five by September 1, 2014, through rising fourth graders) for VBS’s Home Run Derby. Registration is open. We’re also looking for trainers (aka volunteers) for our game! VBS Training Camp (birth to age four) is provided for volunteers’ children.
 
-                                    %a.read-more{:href => "#"}
-                                        More
-                                        %span
-                                            ›
-                        .media-obj
-                            .media-image
-                                %img{:src => "http://pcpc.org/image/2/450/0/5/0/uploads/images/events/banners/young-adult-summer-stories-ban-5374e8420d3ab.png", :alt => ""}/
-                            .media-content
-                                %h3 Visiting
-                                %p.date June 05, 2015
-                                %p
+                                %a.read-more{:href => "#"}
+                                    More
                                     %span
-                                        Welcome to Park Cities Presbyterian Church.
-                                    We’re recruiting “players” (age five by September 1, 2014, through rising fourth graders) for VBS’s Home Run Derby. Registration is open. We’re also looking for trainers (aka volunteers) for our game! VBS Training Camp (birth to age four) is provided for volunteers’ children.
+                                        ›
+                    .media-obj
+                        .media-image
+                            %img{:src => "http://pcpc.org/image/2/450/0/5/0/uploads/images/events/banners/young-adult-summer-stories-ban-5374e8420d3ab.png", :alt => ""}/
+                        .media-content
+                            %h3 Visiting
+                            %p.date June 05, 2015
+                            %p
+                                %span
+                                    Welcome to Park Cities Presbyterian Church.
+                                We’re recruiting “players” (age five by September 1, 2014, through rising fourth graders) for VBS’s Home Run Derby. Registration is open. We’re also looking for trainers (aka volunteers) for our game! VBS Training Camp (birth to age four) is provided for volunteers’ children.
 
-                                    %a.read-more{:href => "#"}
-                                        More
-                                        %span
-                                            ›
-                        .media-obj
-                            .media-image
-                                %img{:src => "http://pcpc.org/image/2/450/0/5/0/uploads/images/events/banners/young-adult-summer-stories-ban-5374e8420d3ab.png", :alt => ""}/
-                            .media-content
-                                %h3 Visiting
-                                %p.date June 05, 2015
-                                %p
+                                %a.read-more{:href => "#"}
+                                    More
                                     %span
-                                        Welcome to Park Cities Presbyterian Church.
-                                    We’re recruiting “players” (age five by September 1, 2014, through rising fourth graders) for VBS’s Home Run Derby. Registration is open. We’re also looking for trainers (aka volunteers) for our game! VBS Training Camp (birth to age four) is provided for volunteers’ children.
+                                        ›
+                    .media-obj
+                        .media-image
+                            %img{:src => "http://pcpc.org/image/2/450/0/5/0/uploads/images/events/banners/young-adult-summer-stories-ban-5374e8420d3ab.png", :alt => ""}/
+                        .media-content
+                            %h3 Visiting
+                            %p.date June 05, 2015
+                            %p
+                                %span
+                                    Welcome to Park Cities Presbyterian Church.
+                                We’re recruiting “players” (age five by September 1, 2014, through rising fourth graders) for VBS’s Home Run Derby. Registration is open. We’re also looking for trainers (aka volunteers) for our game! VBS Training Camp (birth to age four) is provided for volunteers’ children.
 
-                                    %a.read-more{:href => "#"}
-                                        More
-                                        %span
-                                            ›
-                        .media-obj
-                            .media-image
-                                %img{:src => "http://pcpc.org/image/2/450/0/5/0/uploads/images/events/banners/young-adult-summer-stories-ban-5374e8420d3ab.png", :alt => ""}/
-                            .media-content
-                                %h3 Visiting
-                                %p.date June 05, 2015
-                                %p
+                                %a.read-more{:href => "#"}
+                                    More
                                     %span
-                                        Welcome to Park Cities Presbyterian Church.
-                                    We’re recruiting “players” (age five by September 1, 2014, through rising fourth graders) for VBS’s Home Run Derby. Registration is open. We’re also looking for trainers (aka volunteers) for our game! VBS Training Camp (birth to age four) is provided for volunteers’ children.
+                                        ›
+                    .media-obj
+                        .media-image
+                            %img{:src => "http://pcpc.org/image/2/450/0/5/0/uploads/images/events/banners/young-adult-summer-stories-ban-5374e8420d3ab.png", :alt => ""}/
+                        .media-content
+                            %h3 Visiting
+                            %p.date June 05, 2015
+                            %p
+                                %span
+                                    Welcome to Park Cities Presbyterian Church.
+                                We’re recruiting “players” (age five by September 1, 2014, through rising fourth graders) for VBS’s Home Run Derby. Registration is open. We’re also looking for trainers (aka volunteers) for our game! VBS Training Camp (birth to age four) is provided for volunteers’ children.
 
-                                    %a.read-more{:href => "#"}
-                                        More
-                                        %span
-                                            ›
-                        .media-obj
-                            .media-image
-                                %img{:src => "http://pcpc.org/image/2/450/0/5/0/uploads/images/events/banners/young-adult-summer-stories-ban-5374e8420d3ab.png", :alt => ""}/
-                            .media-content
-                                %h3 Visiting
-                                %p.date June 05, 2015
-                                %p
+                                %a.read-more{:href => "#"}
+                                    More
                                     %span
-                                        Welcome to Park Cities Presbyterian Church.
-                                    We’re recruiting “players” (age five by September 1, 2014, through rising fourth graders) for VBS’s Home Run Derby. Registration is open. We’re also looking for trainers (aka volunteers) for our game! VBS Training Camp (birth to age four) is provided for volunteers’ children.
-
-                                    %a.read-more{:href => "#"}
-                                        More
-                                        %span
-                                            ›
+                                        ›
 
 
 
-                %footer.sub
-                    .breadcrumb
-                        %a{:href => "#"} About
-                        %a{:href => "#"} New to PCPC
+            %footer.sub
+                .breadcrumb
+                    %a{:href => "#"} About
+                    %a{:href => "#"} New to PCPC
 
 
-    -# Scripts
-    %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"}
-    // window.jQuery || document.write('<script src="../js/min/jquery.min.js"><\/script>')
+-# Scripts
+%script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"}
+// window.jQuery || document.write('<script src="../js/min/jquery.min.js"><\/script>')
 
-    %script{:src => "../js/min/app.min.js"}
-    %script{:src => "../js/min/sitescripts.min.js"}
+%script{:src => "../js/min/app.min.js"}
+%script{:src => "../js/min/sitescripts.min.js"}
 
-    -# Google Analytics
-        %script
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
+-# Google Analytics
+    %script
+        var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)}(document,'script'));
 
-
-
-
-
+</html>

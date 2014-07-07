@@ -1,126 +1,123 @@
 !!! 5
 -# paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-%html.no-js{:lang => "en"}
+/[if lt IE 7] <html lang="en" class="no-js ie6">
+/[if IE 7 ]   <html lang="en" class="no-js ie7">
+/[if IE 8 ]   <html lang="en" class="no-js ie8">
+/[if IE 9 ]   <html lang="en" class="no-js ie9">
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 
-    %head
+%head
 
-        %meta{:charset => "utf-8", :"http-equiv"=>"Content-Type", :content=>"text/html"}
+    %meta{:charset => "utf-8", :"http-equiv"=>"Content-Type", :content=>"text/html"}
 
-        %title Project Name
-        %meta{:name => "description", :content => ""}
-        %meta{:name => "keywords", :content => ""}
-        %meta{:name => "author", :content => ""}
+    %title Project Name
+    %meta{:name => "description", :content => ""}
+    %meta{:name => "keywords", :content => ""}
+    %meta{:name => "author", :content => ""}
 
-        -# Mobile
-        %meta{:name => "viewport", :content => "width=device-width, initial-scale=1"}
+    -# Mobile
+    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1"}
 
-        -# Favicon
-        / %link{:href => "../img/icons/favicon.ico", :rel => "shortcut icon"}
+    -# Favicon
+    %link{:href => "../img/icons/favicon_32x32.png", :rel => "shortcut icon"}
 
-        -# FONTS
-        %script{:src => "//use.typekit.net/xrq4srv.js"}
-        %script
-            try{Typekit.load();}catch(e){}
+    -# FONTS
+    %script{:src => "//use.typekit.net/xrq4srv.js"}
+    %script
+        try{Typekit.load();}catch(e){}
 
-        -# CSS
-        %link{:rel => "stylesheet", :href => "../css/app.css"}
+    -# CSS
+    %link{:rel => "stylesheet", :href => "../css/app.css"}
 
-        -# Modernizr
-        %script{:src => "../js/libs/modernizr-ck.js"}
+    -# Modernizr
+    %script{:src => "../js/libs/modernizr-ck.js"}
 
-        -# IE LT 9
-        <!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="../css/ie8.css" /><script src='../js/min/ie.min.js'></script><![endif]-->
-
-
-
-    %body.init
+    -# IE LT 9
+    <!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="../css/ie8.css" /><script src='../js/min/ie.min.js'></script><![endif]-->
 
 
 
-        -# Content Wrap
-        %main#content-wrap{:role => "main"}
-            .outer-bounds
-                .content-row
-
-                    .main-content.full-bleed
-                        %header.content-header
-                            .content-row
-                                %h2.left PCPC Video Stream
-                                .right.options
-                                    %a.btn.btn-secondary{:href => "#"} View PCPC VIDEO STREAM ARCHIVES
-                            .content-row
-                                %br/
-                                %p.lead The PCPC live broadcast is scheduled to begin on Sundays at 8:00, 9:30 and 11:00am (CST). If you arrive early, please click the “refresh” or “reload’” button, if the player does not automatically begin.
-                            %hr/
+%body.init
 
 
-                        %iframe{:src => "//www.ustream.tv/embed/12622246?wmode=direct&amp;showtitle=false", :frameborder => "0"}
-                        %br/
-                        %small Church Streaming and Podcast License CSPL #364068 // CCS WorshipCast License
 
+    -# Content Wrap
+    %main#content-wrap{:role => "main"}
+        .outer-bounds
+            .content-row
+
+                .main-content.full-bleed
+                    %header.content-header
+                        .content-row
+                            %h2.left PCPC Video Stream
+                            .right.options
+                                %a.btn.btn-secondary{:href => "#"} View PCPC VIDEO STREAM ARCHIVES
+                        .content-row
+                            %br/
+                            %p.lead The PCPC live broadcast is scheduled to begin on Sundays at 8:00, 9:30 and 11:00am (CST). If you arrive early, please click the “refresh” or “reload’” button, if the player does not automatically begin.
                         %hr/
 
-                        .content-row
-                            .col-three
-                                .cards
-                                    .card
-                                        .card-header
-                                            Sermon Overview
-                                        .card-copy
 
-                                            %p.date May 25, 2014
-                                            %p
-                                                %strong
-                                                    To Know the Love of Christ
-                                            %p
-                                                %em
-                                                    Ephesians 3:14-19
-                                            %p Skip Ryan
+                    %iframe{:src => "//www.ustream.tv/embed/12622246?wmode=direct&amp;showtitle=false", :frameborder => "0"}
+                    %br/
+                    %small Church Streaming and Podcast License CSPL #364068 // CCS WorshipCast License
 
+                    %hr/
 
-                            .col-nine
-                                %h4 Ephesians 3:14-19
-                                %h6 Prayer for Spiritual Strength
-                                %blockquote
-                                    %span.verse-num
-                                        14
-                                    For this reason I bow my knees before the Father,
-                                    %span.verse-num
-                                        15
-                                    from whom every familyOr fatherhood; the Greek word patria is closely related to the word for Father in heaven and on earth is named,
-                                    %span.verse-num
-                                        16
-                                    that according to the riches of his glory he may grant you to be strengthened with power through his Spirit in your inner being…
-                                %cite
-                                    The Holy Bible, English Standard Version copyright (c)2001 by Crossway Bibles, a division of Good News Publishers. Used by permission. All rights reserved. http://www.esv.org
+                    .content-row
+                        .col-three
+                            .cards
+                                .card
+                                    .card-header
+                                        Sermon Overview
+                                    .card-copy
+
+                                        %p.date May 25, 2014
+                                        %p
+                                            %strong
+                                                To Know the Love of Christ
+                                        %p
+                                            %em
+                                                Ephesians 3:14-19
+                                        %p Skip Ryan
 
 
-                %footer.sub
-                    .breadcrumb
-                        %a{:href => "#"} About
-                        %a{:href => "#"} New to PCPC
+                        .col-nine
+                            %h4 Ephesians 3:14-19
+                            %h6 Prayer for Spiritual Strength
+                            %blockquote
+                                %span.verse-num
+                                    14
+                                For this reason I bow my knees before the Father,
+                                %span.verse-num
+                                    15
+                                from whom every familyOr fatherhood; the Greek word patria is closely related to the word for Father in heaven and on earth is named,
+                                %span.verse-num
+                                    16
+                                that according to the riches of his glory he may grant you to be strengthened with power through his Spirit in your inner being…
+                            %cite
+                                The Holy Bible, English Standard Version copyright (c)2001 by Crossway Bibles, a division of Good News Publishers. Used by permission. All rights reserved. http://www.esv.org
 
 
-
-    -# Scripts
-    %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"}
-    // window.jQuery || document.write('<script src="../js/min/jquery.min.js"><\/script>')
-
-    %script{:src => "../js/min/app.min.js"}
-    %script{:src => "../js/min/sitescripts.min.js"}
-
-    -# Google Analytics
-        %script
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
+            %footer.sub
+                .breadcrumb
+                    %a{:href => "#"} About
+                    %a{:href => "#"} New to PCPC
 
 
 
+-# Scripts
+%script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"}
+// window.jQuery || document.write('<script src="../js/min/jquery.min.js"><\/script>')
 
+%script{:src => "../js/min/app.min.js"}
+%script{:src => "../js/min/sitescripts.min.js"}
 
+-# Google Analytics
+    %script
+        var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)}(document,'script'));
+
+</html>

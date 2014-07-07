@@ -3,6 +3,14 @@
 
 // Media Queries //
 
+@media screen and (max-width: $nav-break) {
+    #sermon-info .col-six,
+    #sermon-info .col-three {
+        @include fullBleed;
+    }
+}
+
+
 @include media($ipad-portrait-down) {
 
     // General

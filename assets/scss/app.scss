@@ -1,31 +1,19 @@
-
-
-
-// Main Stylesheet //
-// NOTE: Everything is imported into this file, except IE specific styles
-
+// MAIN CSS - Everything, except IE's styles and your grandmother's chocolate cake
+//////////////////////////////////////////////////////////////////////////////////
 
 @import
-    // BOURBON
-    'bourbon/bourbon'
-    ,'neat/neat'
-    ,'set-mixins'
+        // LIBRARIES: BOURBON, NEAT, MIXINS
+        'bourbon/bourbon'
+        ,'neat/neat'
+        ,'components/mixins'
 
-    // RESET, FOUC
-    ,'normalize'
-    ,'components/no-fouc'
+        // LOAD FIRST: NORMALIZE, NO-FOUC
+        ,'components/normalize'
+        ,'components/no-fouc'
 
-    // MORE BOURBON
-    ,'bitters/bitters'
-    ,'refills/refills'
-
-
-    // COMPONENTS
-    ,'refills-ext/refills-ext'
-    ,'components/import-blocks'
-
-    // MQ, PRINT
-    ,'components/mq'
-    ,'components/print'
-    ;
+        // PATTERNS: BITTERS, REFILLS, COMPONENTS
+        ,'bitters/bitters'
+        ,'refills/refills'
+        ,'components/components'
+        ;
 
