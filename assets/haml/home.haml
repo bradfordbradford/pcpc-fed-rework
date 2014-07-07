@@ -1,483 +1,483 @@
 !!! 5
 -# paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-%html.no-js{:lang => "en"}
+/[if lt IE 7] <html lang="en" class="no-js ie6">
+/[if IE 7 ]   <html lang="en" class="no-js ie7">
+/[if IE 8 ]   <html lang="en" class="no-js ie8">
+/[if IE 9 ]   <html lang="en" class="no-js ie9">
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 
-    %head
+%head
 
-        %meta{:charset => "utf-8", :"http-equiv"=>"Content-Type", :content=>"text/html"}
+    %meta{:charset => "utf-8", :"http-equiv"=>"Content-Type", :content=>"text/html"}
 
-        %title Project Name
-        %meta{:name => "description", :content => ""}
-        %meta{:name => "keywords", :content => ""}
-        %meta{:name => "author", :content => ""}
+    %title Project Name
+    %meta{:name => "description", :content => ""}
+    %meta{:name => "keywords", :content => ""}
+    %meta{:name => "author", :content => ""}
 
-        -# Mobile
-        %meta{:name => "viewport", :content => "width=device-width, initial-scale=1"}
+    -# Mobile
+    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1"}
 
-        -# Favicon
-        / %link{:href => "../img/icons/favicon.ico", :rel => "shortcut icon"}
+    -# Favicon
+    %link{:href => "../img/icons/favicon_32x32.png", :rel => "shortcut icon"}
 
-        -# FONTS
-        %script{:src => "//use.typekit.net/xrq4srv.js"}
-        %script
-            try{Typekit.load();}catch(e){}
+    -# FONTS
+    %script{:src => "//use.typekit.net/xrq4srv.js"}
+    %script
+        try{Typekit.load();}catch(e){}
 
-        -# CSS
-        %link{:rel => "stylesheet", :href => "../css/app.css"}
+    -# CSS
+    %link{:rel => "stylesheet", :href => "../css/app.css"}
 
-        -# Modernizr
-        %script{:src => "../js/min/modernizr.min.js"}
+    -# Modernizr
+    %script{:src => "../js/min/modernizr.min.js"}
 
-        -# IE LT 9
-        <!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="../css/ie8.css" /><script src='../js/min/ie.min.js'></script><![endif]-->
-
-
-
-
-    %body.init
-
-
-        -# Header & Content Wrap
-        %section#header-nav-wrap
-            %section#main-site-navigation-wrap
-                .site-navigation-inner
-
-                    -# Logo
-                    %header#site-header{:role => "banner"}
-                        .left
-                            %h1.logo
-                                %a{:href => "#"}
-                                    %span Name
-                            %dl.service-times
-                                %dt Sunday Service Times
-                                %dd 8:00 am - Communion Service
-                                %dd 9:30 am / 11:00 am
-
-                        .right.aside-menu
-                            %a{:href => "#"} Live Stream /
-                            %a{:href => "#"} Give
-                            %a.js-search-trigger.search.ico{:href => "#", :'data-icon'=>'t'}
-
-                    -# JS Search
-                    .js-search-wrap.hide-on-tablet
-                        .js-search.search-and-submit
-                            .inner-search
-                                %p.meta Search for topics, scriptures, or keywords…
-                                %form.content-row{:action => ""}
-                                    %input{:type => "search", :placeholder => "Search"}/
-                                    %button.ico-search{:type => "submit"}
-                    #js-search-overlay
-
-
-                    -# Mobile Nav
-                    .js-mobile-menu-wrap
-                        #js-mobile-menu
-                            %span.menu-prompt
-                                menu
-                            .menu.icon{:href => "#", :'data-icon'=>'i'}
-                        %nav.mobile-site-nav
-                            %ul#navigation-menu
-                                %li
-                                    %a{:href => "#"} About PCPC
-                                %li
-                                    %a{:href => "#"} Worship
-                                %li
-                                    %a{:href => "#"} Grow
-                                %li
-                                    %a{:href => "#"} Serve
-                                %li
-                                    %a{:href => "#"} Missions
-                                %li
-                                    %a{:href => "#"} Care
-                                %li
-                                    %a{:href => "#"} Resources
-                                %li
-                                    %a{:href => "#"} News/Events
-                                %li
-                                    .search-and-submit
-                                        %input{:type => "search", :placeholder => "Search"}/
-                                        %button.btn.icon{:type => "submit", :'data-icon'=>'t'}
+    -# IE LT 9
+    <!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="../css/ie8.css" /><script src='../js/min/ie.min.js'></script><![endif]-->
 
 
 
-                    -# Navigation
-                    %nav#main-navigation{:role => "navigation"}
-                        %ol.navigation-list
-                            %li.nav-item
+
+%body.init
+
+
+    -# Header & Content Wrap
+    %section#header-nav-wrap
+        %section#main-site-navigation-wrap
+            .site-navigation-inner
+
+                -# Logo
+                %header#site-header{:role => "banner"}
+                    .left
+                        %h1.logo
+                            %a{:href => "#"}
+                                %span Name
+                        %dl.service-times
+                            %dt Sunday Service Times
+                            %dd 8:00 am - Communion Service
+                            %dd 9:30 am / 11:00 am
+
+                    .right.aside-menu
+                        %a{:href => "#"} Live Stream /
+                        %a{:href => "#"} Give
+                        %a.js-search-trigger.search.ico{:href => "#", :'data-icon'=>'t'}
+
+                -# JS Search
+                .js-search-wrap.hide-on-tablet
+                    .js-search.search-and-submit
+                        .inner-search
+                            %p.meta Search for topics, scriptures, or keywords…
+                            %form.content-row{:action => ""}
+                                %input{:type => "search", :placeholder => "Search"}/
+                                %button.ico-search{:type => "submit"}
+                #js-search-overlay
+
+
+                -# Mobile Nav
+                .js-mobile-menu-wrap
+                    #js-mobile-menu
+                        %span.menu-prompt
+                            menu
+                        .menu.icon{:href => "#", :'data-icon'=>'i'}
+                    %nav.mobile-site-nav
+                        %ul#navigation-menu
+                            %li
                                 %a{:href => "#"} About PCPC
-                                %span.mark
-                                %ol
-                                    %li.nav-sub-item
-                                        %header
-                                            %h4 Description
-                                        %p
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, repellendus, deleniti, fugit, laboriosam minima atque eius voluptatibus tempora accusamus ratione eos non ipsum deserunt optio neque maiores reprehenderit necessitatibus eaque!
-
-                                    %li.nav-sub-item
-                                        .col-six
-                                            %h4.title
-                                                %a{:href => "#"}
-                                                    Who We Are
-                                            %ol
-                                                %li
-                                                    %a{:href => "#"} Link Item
-                                                %li
-                                                    %a{:href => "#"} Link Item
-                            %li.nav-item
+                            %li
                                 %a{:href => "#"} Worship
-                                %span.mark
-                                %ol
-                                    %li.nav-sub-item
-                                        %header
-                                            %h4 Description
-                                        %p
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, repellendus, deleniti, fugit, laboriosam minima atque eius voluptatibus tempora accusamus ratione eos non ipsum deserunt optio neque maiores reprehenderit necessitatibus eaque!
-
-                                    %li.nav-sub-item
-                                        .col-six
-                                            %h4.title
-                                                %a{:href => "#"}
-                                                    Who We Are
-                                            %ol
-                                                %li
-                                                    %a{:href => "#"} Link Item
-                                                %li
-                                                    %a{:href => "#"} Link Item
-
-
-                                            %h4.title
-                                                %a{:href => "#"}
-                                                    Our Campus
-                                            %ol
-                                                %li
-                                                    %a{:href => "#"} Link Item
-                                                %li
-                                                    %a{:href => "#"} Link Item
-
-                                            %h4.title
-                                                %a{:href => "#"}
-                                                    Services
-                                            %ol
-                                                %li
-                                                    %a{:href => "#"} Link Item
-                                                %li
-                                                    %a{:href => "#"} Link Item
-
-
-                                        .col-six
-                                            %h4.title
-                                                %a{:href => "#"}
-                                                    Our Leadership and Staff
-                                            %ol
-                                                %li
-                                                    %a{:href => "#"} Link Item
-                                                %li
-                                                    %a{:href => "#"} Link Item
-
-                                                %hr/
-
-                                                %li
-                                                    %a{:href => "#"} Link Item
-                                                %li
-                                                    %a{:href => "#"} Link Item
-
-
-                            %li.nav-item
+                            %li
                                 %a{:href => "#"} Grow
-                                %span.mark
-                                %ol
-                                    %li.nav-sub-item
-                                        %header
-                                            %h4 Description
-                                        %p
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, repellendus, deleniti, fugit, laboriosam minima atque eius voluptatibus tempora accusamus ratione eos non ipsum deserunt optio neque maiores reprehenderit necessitatibus eaque!
-
-                                    %li.nav-sub-item
-                                        .col-six
-                                            %h4.title
-                                                %a{:href => "#"}
-                                                    Who We Are
-                                            %ol
-                                                %li
-                                                    %a{:href => "#"} Link Item
-                                                %li
-                                                    %a{:href => "#"} Link Item
-                            %li.nav-item
+                            %li
                                 %a{:href => "#"} Serve
-                                %span.mark
-                                %ol
-                                    %li.nav-sub-item
-                                        %header
-                                            %h4 Description
-                                        %p
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, repellendus, deleniti, fugit, laboriosam minima atque eius voluptatibus tempora accusamus ratione eos non ipsum deserunt optio neque maiores reprehenderit necessitatibus eaque!
-
-                                    %li.nav-sub-item
-                                        .col-six
-                                            %h4.title
-                                                %a{:href => "#"}
-                                                    Who We Are
-                                            %ol
-                                                %li
-                                                    %a{:href => "#"} Link Item
-                                                %li
-                                                    %a{:href => "#"} Link Item
-                            %li.nav-item
+                            %li
                                 %a{:href => "#"} Missions
-                                %span.mark
-                                %ol
-                                    %li.nav-sub-item
-                                        %header
-                                            %h4 Description
-                                        %p
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, repellendus, deleniti, fugit, laboriosam minima atque eius voluptatibus tempora accusamus ratione eos non ipsum deserunt optio neque maiores reprehenderit necessitatibus eaque!
-
-                                    %li.nav-sub-item
-                                        .col-six
-                                            %h4.title
-                                                %a{:href => "#"}
-                                                    Who We Are
-                                            %ol
-                                                %li
-                                                    %a{:href => "#"} Link Item
-                                                %li
-                                                    %a{:href => "#"} Link Item
-                            %li.nav-item
+                            %li
                                 %a{:href => "#"} Care
-                                %span.mark
-                                %ol
-                                    %li.nav-sub-item
-                                        %header
-                                            %h4 Description
-                                        %p
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, repellendus, deleniti, fugit, laboriosam minima atque eius voluptatibus tempora accusamus ratione eos non ipsum deserunt optio neque maiores reprehenderit necessitatibus eaque!
-
-                                    %li.nav-sub-item
-                                        .col-six
-                                            %h4.title
-                                                %a{:href => "#"}
-                                                    Who We Are
-                                            %ol
-                                                %li
-                                                    %a{:href => "#"} Link Item
-                                                %li
-                                                    %a{:href => "#"} Link Item
-                            %li.nav-item
+                            %li
                                 %a{:href => "#"} Resources
-                                %span.mark
-                                %ol
-                                    %li.nav-sub-item
-                                        %header
-                                            %h4 Description
-                                        %p
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, repellendus, deleniti, fugit, laboriosam minima atque eius voluptatibus tempora accusamus ratione eos non ipsum deserunt optio neque maiores reprehenderit necessitatibus eaque!
-
-                                    %li.nav-sub-item
-                                        .col-six
-                                            %h4.title
-                                                %a{:href => "#"}
-                                                    Who We Are
-                                            %ol
-                                                %li
-                                                    %a{:href => "#"} Link Item
-                                                %li
-                                                    %a{:href => "#"} Link Item
-                            %li.nav-item
+                            %li
                                 %a{:href => "#"} News/Events
-                                %ol
-                                    %li.nav-sub-item
-                                        %header
-                                            %h4 Description
-                                        %p
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, repellendus, deleniti, fugit, laboriosam minima atque eius voluptatibus tempora accusamus ratione eos non ipsum deserunt optio neque maiores reprehenderit necessitatibus eaque!
-
-                                    %li.nav-sub-item
-                                        .col-six
-                                            %h4.title
-                                                %a{:href => "#"}
-                                                    Who We Are
-                                            %ol
-                                                %li
-                                                    %a{:href => "#"} Link Item
-                                                %li
-                                                    %a{:href => "#"} Link Item
+                            %li
+                                .search-and-submit
+                                    %input{:type => "search", :placeholder => "Search"}/
+                                    %button.btn.icon{:type => "submit", :'data-icon'=>'t'}
 
 
-        -# Content Wrap
-        %main#content-wrap.slider-wrap{:role => "main"}
-            .slider-bounds
-                .content-row
 
-                    #homeSlider.royalSlider.rsDefaultInv
-                        .rsContent
-                            %a.rsImg{:href => "http://placehold.it/1450x540"}
-                            %span.rsTmb
-                                %img{:src => "http://placehold.it/540x350", :alt => ""}/
-                            .slideContentWrap.rsABlock
-                                %h2
-                                    Welcome to Park Cities
-                                    %br/
-                                    Presbyterian Church
-                                %hr/
-                                %a.btn.btn-secondary{:href => "#"} New Here?
-                                %a.btn.btn-secondary{:href => "#"} Directions &amp; Parking
+                -# Navigation
+                %nav#main-navigation{:role => "navigation"}
+                    %ol.navigation-list
+                        %li.nav-item
+                            %a{:href => "#"} About PCPC
+                            %span.mark
+                            %ol
+                                %li.nav-sub-item
+                                    %header
+                                        %h4 Description
+                                    %p
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, repellendus, deleniti, fugit, laboriosam minima atque eius voluptatibus tempora accusamus ratione eos non ipsum deserunt optio neque maiores reprehenderit necessitatibus eaque!
 
-                        .rsContent
-                            %a.rsImg{:href => "http://placehold.it/1450x540"}
-                            %span.rsTmb
-                                %img{:src => "http://placehold.it/540x350", :alt => ""}/
-                            .rsABlock.rsFirstSlideTitle.rsSlideTitle
-                                %h2 Headers with Transitions
-                            .rsABlock.rsSecondSlideTitle.rsSlideTitle{:'data-delay'=>'350'}
-                                %h5
-                                    These are optional headers—a great way to add
-                                    %br/
-                                    a bit of complexity to simple images
-
-                        .rsContent
-                            %a.rsImg{:href => "http://placehold.it/1450x540"}
-                            %span.rsTmb
-                                %img{:src => "http://placehold.it/540x350", :alt => ""}/
-                            .rsABlock.rsFirstSlideTitle.rsSlideTitle
-                                %h2 Another, single Header with Transition
-                        .rsContent
-                            %a.rsImg{:href => "http://placehold.it/1450x540"}
-                            %span.rsTmb
-                                %img{:src => "http://placehold.it/540x350", :alt => ""}/
-
-            .outer-bounds
-                .content-row#sermon-info.content-article.padding-b
-                    %hr/
-                    .content-row
-                        .col-three
-                            %h2.serif UPCOMING SERMON
-                            %p.date Sunday, June 29, 2014
-                        .col-six
-                            %h4.serif SERIES ON PRAYER
-                            %h5 When Have We Loved One Another Enough?
-                            %h6 1 Thessalonians 4:9-12
-                        .col-three
-                            %h4.serif PREACHING
-                            %h6 Chad Scruggs
-                    %hr/
-
-
-        -# Site Footer
-        %footer.footer#main-footer{:role=>'contentinfo'}
-            .outer-bounds
-                .footer-links
-                    %ul.border-b
-                        %li
-                            %h3 Quick Links
-                        %li
-                            %a{:href => "#"} Home
-                        %li
-                            %a{:href => "#"} About
-                        %li
+                                %li.nav-sub-item
+                                    .col-six
+                                        %h4.title
+                                            %a{:href => "#"}
+                                                Who We Are
+                                        %ol
+                                            %li
+                                                %a{:href => "#"} Link Item
+                                            %li
+                                                %a{:href => "#"} Link Item
+                        %li.nav-item
                             %a{:href => "#"} Worship
-                        %li
+                            %span.mark
+                            %ol
+                                %li.nav-sub-item
+                                    %header
+                                        %h4 Description
+                                    %p
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, repellendus, deleniti, fugit, laboriosam minima atque eius voluptatibus tempora accusamus ratione eos non ipsum deserunt optio neque maiores reprehenderit necessitatibus eaque!
+
+                                %li.nav-sub-item
+                                    .col-six
+                                        %h4.title
+                                            %a{:href => "#"}
+                                                Who We Are
+                                        %ol
+                                            %li
+                                                %a{:href => "#"} Link Item
+                                            %li
+                                                %a{:href => "#"} Link Item
+
+
+                                        %h4.title
+                                            %a{:href => "#"}
+                                                Our Campus
+                                        %ol
+                                            %li
+                                                %a{:href => "#"} Link Item
+                                            %li
+                                                %a{:href => "#"} Link Item
+
+                                        %h4.title
+                                            %a{:href => "#"}
+                                                Services
+                                        %ol
+                                            %li
+                                                %a{:href => "#"} Link Item
+                                            %li
+                                                %a{:href => "#"} Link Item
+
+
+                                    .col-six
+                                        %h4.title
+                                            %a{:href => "#"}
+                                                Our Leadership and Staff
+                                        %ol
+                                            %li
+                                                %a{:href => "#"} Link Item
+                                            %li
+                                                %a{:href => "#"} Link Item
+
+                                            %hr/
+
+                                            %li
+                                                %a{:href => "#"} Link Item
+                                            %li
+                                                %a{:href => "#"} Link Item
+
+
+                        %li.nav-item
                             %a{:href => "#"} Grow
-                        %li
+                            %span.mark
+                            %ol
+                                %li.nav-sub-item
+                                    %header
+                                        %h4 Description
+                                    %p
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, repellendus, deleniti, fugit, laboriosam minima atque eius voluptatibus tempora accusamus ratione eos non ipsum deserunt optio neque maiores reprehenderit necessitatibus eaque!
+
+                                %li.nav-sub-item
+                                    .col-six
+                                        %h4.title
+                                            %a{:href => "#"}
+                                                Who We Are
+                                        %ol
+                                            %li
+                                                %a{:href => "#"} Link Item
+                                            %li
+                                                %a{:href => "#"} Link Item
+                        %li.nav-item
                             %a{:href => "#"} Serve
-                        %li
+                            %span.mark
+                            %ol
+                                %li.nav-sub-item
+                                    %header
+                                        %h4 Description
+                                    %p
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, repellendus, deleniti, fugit, laboriosam minima atque eius voluptatibus tempora accusamus ratione eos non ipsum deserunt optio neque maiores reprehenderit necessitatibus eaque!
+
+                                %li.nav-sub-item
+                                    .col-six
+                                        %h4.title
+                                            %a{:href => "#"}
+                                                Who We Are
+                                        %ol
+                                            %li
+                                                %a{:href => "#"} Link Item
+                                            %li
+                                                %a{:href => "#"} Link Item
+                        %li.nav-item
                             %a{:href => "#"} Missions
-                        %li
+                            %span.mark
+                            %ol
+                                %li.nav-sub-item
+                                    %header
+                                        %h4 Description
+                                    %p
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, repellendus, deleniti, fugit, laboriosam minima atque eius voluptatibus tempora accusamus ratione eos non ipsum deserunt optio neque maiores reprehenderit necessitatibus eaque!
+
+                                %li.nav-sub-item
+                                    .col-six
+                                        %h4.title
+                                            %a{:href => "#"}
+                                                Who We Are
+                                        %ol
+                                            %li
+                                                %a{:href => "#"} Link Item
+                                            %li
+                                                %a{:href => "#"} Link Item
+                        %li.nav-item
                             %a{:href => "#"} Care
-                        %li
+                            %span.mark
+                            %ol
+                                %li.nav-sub-item
+                                    %header
+                                        %h4 Description
+                                    %p
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, repellendus, deleniti, fugit, laboriosam minima atque eius voluptatibus tempora accusamus ratione eos non ipsum deserunt optio neque maiores reprehenderit necessitatibus eaque!
+
+                                %li.nav-sub-item
+                                    .col-six
+                                        %h4.title
+                                            %a{:href => "#"}
+                                                Who We Are
+                                        %ol
+                                            %li
+                                                %a{:href => "#"} Link Item
+                                            %li
+                                                %a{:href => "#"} Link Item
+                        %li.nav-item
                             %a{:href => "#"} Resources
-                        %li
+                            %span.mark
+                            %ol
+                                %li.nav-sub-item
+                                    %header
+                                        %h4 Description
+                                    %p
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, repellendus, deleniti, fugit, laboriosam minima atque eius voluptatibus tempora accusamus ratione eos non ipsum deserunt optio neque maiores reprehenderit necessitatibus eaque!
+
+                                %li.nav-sub-item
+                                    .col-six
+                                        %h4.title
+                                            %a{:href => "#"}
+                                                Who We Are
+                                        %ol
+                                            %li
+                                                %a{:href => "#"} Link Item
+                                            %li
+                                                %a{:href => "#"} Link Item
+                        %li.nav-item
                             %a{:href => "#"} News/Events
-                        %li
-                            %a{:href => "#"} Give
+                            %ol
+                                %li.nav-sub-item
+                                    %header
+                                        %h4 Description
+                                    %p
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, repellendus, deleniti, fugit, laboriosam minima atque eius voluptatibus tempora accusamus ratione eos non ipsum deserunt optio neque maiores reprehenderit necessitatibus eaque!
+
+                                %li.nav-sub-item
+                                    .col-six
+                                        %h4.title
+                                            %a{:href => "#"}
+                                                Who We Are
+                                        %ol
+                                            %li
+                                                %a{:href => "#"} Link Item
+                                            %li
+                                                %a{:href => "#"} Link Item
 
 
-                    %ul
-                        %li
-                            %h3 Location & Contact
-                        %li
-                            %small
-                                %span.address 4124 Oak Lawn Avenue
+    -# Content Wrap
+    %main#content-wrap.slider-wrap{:role => "main"}
+        .slider-bounds
+            .content-row
+
+                #homeSlider.royalSlider.rsDefaultInv
+                    .rsContent
+                        %a.rsImg{:href => "http://placehold.it/1450x540"}
+                        %span.rsTmb
+                            %img{:src => "http://placehold.it/540x350", :alt => ""}/
+                        .slideContentWrap.rsABlock
+                            %h2
+                                Welcome to Park Cities
                                 %br/
-                                %span.city Dallas, TX 75219
+                                Presbyterian Church
+                            %hr/
+                            %a.btn.btn-secondary{:href => "#"} New Here?
+                            %a.btn.btn-secondary{:href => "#"} Directions &amp; Parking
+
+                    .rsContent
+                        %a.rsImg{:href => "http://placehold.it/1450x540"}
+                        %span.rsTmb
+                            %img{:src => "http://placehold.it/540x350", :alt => ""}/
+                        .rsABlock.rsFirstSlideTitle.rsSlideTitle
+                            %h2 Headers with Transitions
+                        .rsABlock.rsSecondSlideTitle.rsSlideTitle{:'data-delay'=>'350'}
+                            %h5
+                                These are optional headers—a great way to add
                                 %br/
-                                %a{:href => "#"} Get Directions
-                                %br/
-                                %span.phone P: (214) 224-2500
-                                %br/
-                                %span.fax F: (214) 224-2782
-                        %li
-                            %h3 Office Hours
-                        %li
-                            %small
-                                %span.hours
-                                    8:30 am to 5:00 pm
-                                    %br/
-                                    Monday through Friday
+                                a bit of complexity to simple images
+
+                    .rsContent
+                        %a.rsImg{:href => "http://placehold.it/1450x540"}
+                        %span.rsTmb
+                            %img{:src => "http://placehold.it/540x350", :alt => ""}/
+                        .rsABlock.rsFirstSlideTitle.rsSlideTitle
+                            %h2 Another, single Header with Transition
+                    .rsContent
+                        %a.rsImg{:href => "http://placehold.it/1450x540"}
+                        %span.rsTmb
+                            %img{:src => "http://placehold.it/540x350", :alt => ""}/
+
+        .outer-bounds
+            .content-row#sermon-info.content-article.padding-b
+                %hr/
+                .content-row
+                    .col-three
+                        %h2.serif UPCOMING SERMON
+                        %p.date Sunday, June 29, 2014
+                    .col-six
+                        %h4.serif SERIES ON PRAYER
+                        %h5 When Have We Loved One Another Enough?
+                        %h6 1 Thessalonians 4:9-12
+                    .col-three
+                        %h4.serif PREACHING
+                        %h6 Chad Scruggs
+                %hr/
 
 
-                    %ul
-                        %li
-                            %h3 Sunday Service Times
-                        %li
-                            %small
-                                %span.hours
-                                    8:00 am - Communion Service
-                                    %br/
-                                    9:30 am / 11:00 am
-                                    %br/
-                                %a{:href => "#"} Live Video Stream of the services.
+    -# Site Footer
+    %footer.footer#main-footer{:role=>'contentinfo'}
+        .outer-bounds
+            .footer-links
+                %ul.border-b
+                    %li
+                        %h3 Quick Links
+                    %li
+                        %a{:href => "#"} Home
+                    %li
+                        %a{:href => "#"} About
+                    %li
+                        %a{:href => "#"} Worship
+                    %li
+                        %a{:href => "#"} Grow
+                    %li
+                        %a{:href => "#"} Serve
+                    %li
+                        %a{:href => "#"} Missions
+                    %li
+                        %a{:href => "#"} Care
+                    %li
+                        %a{:href => "#"} Resources
+                    %li
+                        %a{:href => "#"} News/Events
+                    %li
+                        %a{:href => "#"} Give
 
 
-                        %li
-                            %h3 Elsewhere
-                        %li
-                            %a.ico.facebook{:href => "#", :'data-icon'=>'x'}
-                            %a.ico.twitter{:href => "#", :'data-icon'=>'v'}
-                            %a.ico.vimeo{:href => "#", :'data-icon'=>'u'}
-                            %a.ico.google-plus{:href => "#", :'data-icon'=>'w'}
-
+                %ul
+                    %li
+                        %h3 Location & Contact
+                    %li
+                        %small
+                            %span.address 4124 Oak Lawn Avenue
                             %br/
-                            %small
-                                %strong More:
-                            %a{:href => "#"} Upstream,
-                            %a{:href => "#"} Issuu,
-                            %a{:href => "#"} PCPC App
-
-                    %ul
-                        %li
-                            %h3 24/7 Prayer
-                        %li
-                            %small
-                                How can our pastors pray for you?
+                            %span.city Dallas, TX 75219
+                            %br/
+                            %a{:href => "#"} Get Directions
+                            %br/
+                            %span.phone P: (214) 224-2500
+                            %br/
+                            %span.fax F: (214) 224-2782
+                    %li
+                        %h3 Office Hours
+                    %li
+                        %small
+                            %span.hours
+                                8:30 am to 5:00 pm
                                 %br/
-                                %span.email.strong
-                                    E: 24/7prayer@pcpc.org
+                                Monday through Friday
+
+
+                %ul
+                    %li
+                        %h3 Sunday Service Times
+                    %li
+                        %small
+                            %span.hours
+                                8:00 am - Communion Service
                                 %br/
-                                %span.phone P: 214-224-2680
-
-                        %li
-                            %h3 Recently
-                        %li
-                            %a{:href => "#"} The Word of God in Stained Glass
-                        %li
-                            %a{:href => "#"} Trouble Now – Glory Then
-                        %li
-                            %a{:href => "#"} Seven devotionals for times of suffering
+                                9:30 am / 11:00 am
+                                %br/
+                            %a{:href => "#"} Live Video Stream of the services.
 
 
-                %hr.fullbleed/
-                .footnotes
-                    %h3 Park Cities Presbyterian Church &copy; 2014
-                    %small
-                        A congregation of
-                        %a{:href => "#"} Presbyterian Church in America
-                    %br/
-                    %small
-                        %a{:href => "#"} Staff Access
+                    %li
+                        %h3 Elsewhere
+                    %li
+                        %a.ico.facebook{:href => "#", :'data-icon'=>'x'}
+                        %a.ico.twitter{:href => "#", :'data-icon'=>'v'}
+                        %a.ico.vimeo{:href => "#", :'data-icon'=>'u'}
+                        %a.ico.google-plus{:href => "#", :'data-icon'=>'w'}
+
+                        %br/
+                        %small
+                            %strong More:
+                        %a{:href => "#"} Upstream,
+                        %a{:href => "#"} Issuu,
+                        %a{:href => "#"} PCPC App
+
+                %ul
+                    %li
+                        %h3 24/7 Prayer
+                    %li
+                        %small
+                            How can our pastors pray for you?
+                            %br/
+                            %span.email.strong
+                                E: 24/7prayer@pcpc.org
+                            %br/
+                            %span.phone P: 214-224-2680
+
+                    %li
+                        %h3 Recently
+                    %li
+                        %a{:href => "#"} The Word of God in Stained Glass
+                    %li
+                        %a{:href => "#"} Trouble Now – Glory Then
+                    %li
+                        %a{:href => "#"} Seven devotionals for times of suffering
+
+
+            %hr.fullbleed/
+            .footnotes
+                %h3 Park Cities Presbyterian Church &copy; 2014
+                %small
+                    A congregation of
+                    %a{:href => "#"} Presbyterian Church in America
+                %br/
+                %small
+                    %a{:href => "#"} Staff Access
 
 
 
@@ -486,22 +486,19 @@
 
 
 
-    -# Scripts
-    %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"}
-    // window.jQuery || document.write('<script src="../js/min/jquery.min.js"><\/script>')
+-# Scripts
+%script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"}
+// window.jQuery || document.write('<script src="../js/min/jquery.min.js"><\/script>')
 
-    %script{:src => "../js/min/app.min.js"}
-    %script{:src => "../js/min/sitescripts.min.js"}
-    %script{:src => "../js/min/homescripts.min.js"}
+%script{:src => "../js/min/app.min.js"}
+%script{:src => "../js/min/sitescripts.min.js"}
+%script{:src => "../js/min/homescripts.min.js"}
 
-    -# Google Analytics
-        %script
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
+-# Google Analytics
+    %script
+        var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)}(document,'script'));
 
-
-
-
-
+</html>

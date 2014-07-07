@@ -1,0 +1,23 @@
+// More Mixins
+// -------------------------------------------------------
+
+
+
+
+// Center Colums
+@mixin centerColumns {
+    display: block;
+    float:none;
+    margin: 0 auto;
+}
+
+
+
+
+// Full Bleed for Removing Columns
+@mixin fullBleed {
+    margin: auto auto;
+    display: block;
+    float:none;
+    width: auto;
+}
