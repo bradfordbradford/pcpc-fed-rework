@@ -37,14 +37,66 @@
               <dd>9:30 am / 11:00 am</dd>
             </dl>
           </div>
-          <div class='right'>
-            <div class='left'>
-              <a href='#'>Live Stream /</a>
-              <a href='#'>Give</a>
-              <a class='search ico' data-icon='t' href='#'></a>
-            </div>
+          <div class='right aside-menu'>
+            <a href='#'>Live Stream /</a>
+            <a href='#'>Give</a>
+            <a class='js-search-trigger search ico' data-icon='t' href='#'></a>
           </div>
         </header>
+        <div class='js-search-wrap hide-on-tablet'>
+          <div class='js-search search-and-submit'>
+            <div class='inner-search'>
+              <p class='meta'>Search for topics, scriptures, or keywords…</p>
+              <form action='' class='content-row'>
+                <input placeholder='Search' type='search'>
+                <button class='ico-search' type='submit'></button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div id='js-search-overlay'></div>
+        <div class='js-mobile-menu-wrap'>
+          <div id='js-mobile-menu'>
+            <span class='menu-prompt'>
+              menu
+            </span>
+            <div class='menu icon' data-icon='i' href='#'></div>
+          </div>
+          <nav class='mobile-site-nav'>
+            <ul id='navigation-menu'>
+              <li>
+                <a href='#'>About PCPC</a>
+              </li>
+              <li>
+                <a href='#'>Worship</a>
+              </li>
+              <li>
+                <a href='#'>Grow</a>
+              </li>
+              <li>
+                <a href='#'>Serve</a>
+              </li>
+              <li>
+                <a href='#'>Missions</a>
+              </li>
+              <li>
+                <a href='#'>Care</a>
+              </li>
+              <li>
+                <a href='#'>Resources</a>
+              </li>
+              <li>
+                <a href='#'>News/Events</a>
+              </li>
+              <li>
+                <div class='search-and-submit'>
+                  <input placeholder='Search' type='search'>
+                  <button class='btn icon' data-icon='t' type='submit'></button>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
         <nav id='main-navigation' role='navigation'>
           <ol class='navigation-list'>
             <li class='nav-item'>
@@ -285,13 +337,37 @@
               <a href='#'>Resources</a>
               <span class='mark'></span>
               <ol>
-                <li class='nav-sub-item'>
+                <li class='nav-sub-item latest-sermon-wrap'>
                   <header>
-                    <h4>Description</h4>
+                    <h4 class='title'>
+                      <span>
+                        Latest Sermon
+                      </span>
+                    </h4>
+                    <h3>When Have We Loved One Another Enough?</h3>
                   </header>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, repellendus, deleniti, fugit, laboriosam minima atque eius voluptatibus tempora accusamus ratione eos non ipsum deserunt optio neque maiores reprehenderit necessitatibus eaque!
-                  </p>
+                  <div class='media-obj-small'>
+                    <div class='media-image'>
+                      <img alt='' class='profile-img' src='https://pbs.twimg.com/profile_images/461975102410592256/9s_C1Ohp_normal.jpeg'>
+                    </div>
+                    <div class='media-content'>
+                      <a class='color-text normal' href='#'>
+                        <h4>Mark Davis</h4>
+                        <p class='date'>May 18, 2014</p>
+                        <span class='meta'>
+                          <span class='strong'>from the series:</span>
+                          On Prayer
+                        </span>
+                        <span class='meta strong'>
+                          1 Thessalonians 4:9-12
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class='buttons-wrap'>
+                    <a class='btn media-btn listen' href='#'>Listen Now</a>
+                    <a class='btn media-btn download' href='#'>Download MP3</a>
+                  </div>
                 </li>
                 <li class='nav-sub-item'>
                   <div class='col-six'>

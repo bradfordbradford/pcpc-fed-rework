@@ -56,15 +56,50 @@
                             %dd 8:00 am - Communion Service
                             %dd 9:30 am / 11:00 am
 
-                    .right
-                        .left
-                            %a{:href => "#"} Live Stream /
-                            %a{:href => "#"} Give
-                            %a.search.ico{:href => "#", :'data-icon'=>'t'}
-                        -#
-                            .search-and-submit.left
+                    .right.aside-menu
+                        %a{:href => "#"} Live Stream /
+                        %a{:href => "#"} Give
+                        %a.js-search-trigger.search.ico{:href => "#", :'data-icon'=>'t'}
+
+                -# JS Search
+                .js-search-wrap.hide-on-tablet
+                    .js-search.search-and-submit
+                        .inner-search
+                            %p.meta Search for topics, scriptures, or keywords…
+                            %form.content-row{:action => ""}
                                 %input{:type => "search", :placeholder => "Search"}/
                                 %button.ico-search{:type => "submit"}
+                #js-search-overlay
+
+
+                -# Mobile Nav
+                .js-mobile-menu-wrap
+                    #js-mobile-menu
+                        %span.menu-prompt
+                            menu
+                        .menu.icon{:href => "#", :'data-icon'=>'i'}
+                    %nav.mobile-site-nav
+                        %ul#navigation-menu
+                            %li
+                                %a{:href => "#"} About PCPC
+                            %li
+                                %a{:href => "#"} Worship
+                            %li
+                                %a{:href => "#"} Grow
+                            %li
+                                %a{:href => "#"} Serve
+                            %li
+                                %a{:href => "#"} Missions
+                            %li
+                                %a{:href => "#"} Care
+                            %li
+                                %a{:href => "#"} Resources
+                            %li
+                                %a{:href => "#"} News/Events
+                            %li
+                                .search-and-submit
+                                    %input{:type => "search", :placeholder => "Search"}/
+                                    %button.btn.icon{:type => "submit", :'data-icon'=>'t'}
 
 
 
@@ -234,11 +269,30 @@
                             %a{:href => "#"} Resources
                             %span.mark
                             %ol
-                                %li.nav-sub-item
+                                %li.nav-sub-item.latest-sermon-wrap
                                     %header
-                                        %h4 Description
-                                    %p
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, repellendus, deleniti, fugit, laboriosam minima atque eius voluptatibus tempora accusamus ratione eos non ipsum deserunt optio neque maiores reprehenderit necessitatibus eaque!
+                                        %h4.title
+                                            %span
+                                                Latest Sermon
+                                        %h3 When Have We Loved One Another Enough?
+                                    .media-obj-small
+                                        .media-image
+                                            %img.profile-img{:src => "https://pbs.twimg.com/profile_images/461975102410592256/9s_C1Ohp_normal.jpeg", :alt => ""}/
+
+                                        .media-content
+                                            %a.color-text.normal{:href => "#"}
+
+                                                %h4 Mark Davis
+                                                %p.date May 18, 2014
+                                                %span.meta
+                                                    %span.strong from the series:
+                                                    On Prayer
+                                                %span.meta.strong
+                                                    1 Thessalonians 4:9-12
+
+                                    .buttons-wrap
+                                        %a.btn.media-btn.listen{:href => "#"} Listen Now
+                                        %a.btn.media-btn.download{:href => "#"} Download MP3
 
                                 %li.nav-sub-item
                                     .col-six
@@ -269,6 +323,7 @@
                                                 %a{:href => "#"} Link Item
                                             %li
                                                 %a{:href => "#"} Link Item
+
 
 
     -# Content Wrap
